@@ -20,13 +20,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Bqa-Ui-VbB">
-                                <rect key="frame" x="34" y="40" width="252" height="464.5"/>
+                                <rect key="frame" x="34" y="40" width="252" height="464"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTo-k1-hmJ">
                                         <rect key="frame" x="0.0" y="0.0" width="252" height="113"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNM-bF-KnS">
                                                 <rect key="frame" x="201.5" y="0.0" width="50.5" height="113"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downWhiteArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Gu6-Wu-uFr">
+                                                        <rect key="frame" x="5" y="35" width="40" height="40"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    </imageView>
+                                                </subviews>
                                                 <color key="backgroundColor" red="0.74117647060000003" green="0.18039215689999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
@@ -39,10 +45,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M0n-fT-D2L">
-                                        <rect key="frame" x="0.0" y="117" width="252" height="113.5"/>
+                                        <rect key="frame" x="0.0" y="117" width="252" height="113"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T6A-aV-g6r">
-                                                <rect key="frame" x="201.5" y="0.0" width="50.5" height="113.5"/>
+                                                <rect key="frame" x="201.5" y="0.0" width="50.5" height="113"/>
                                                 <color key="backgroundColor" red="0.74117647060000003" green="0.18039215689999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </view>
                                         </subviews>
@@ -55,7 +61,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cnw-3p-FN8">
-                                        <rect key="frame" x="0.0" y="234.5" width="252" height="113"/>
+                                        <rect key="frame" x="0.0" y="234" width="252" height="113"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b39-7R-gN6">
                                                 <rect key="frame" x="201.5" y="0.0" width="50.5" height="113"/>
@@ -71,7 +77,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7hT-MK-ZH1">
-                                        <rect key="frame" x="0.0" y="351.5" width="252" height="113"/>
+                                        <rect key="frame" x="0.0" y="351" width="252" height="113"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gi-x9-vG1">
                                                 <rect key="frame" x="201.5" y="0.0" width="50.5" height="113"/>
@@ -89,13 +95,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0:35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkK-lM-vFW">
-                                <rect key="frame" x="122.5" y="512.5" width="75" height="0.0"/>
+                                <rect key="frame" x="122.5" y="512" width="75" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake to complete" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHc-6r-opG">
-                                <rect key="frame" x="100" y="525" width="120.5" height="0.0"/>
+                                <rect key="frame" x="100" y="524.5" width="120.5" height="0.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.00054475589420000003" green="0.47976779939999997" blue="0.99930316210000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -120,4 +126,7 @@
             <point key="canvasLocation" x="136.875" y="130.98591549295776"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="downWhiteArrow" width="79" height="114"/>
+    </resources>
 </document>
