@@ -28,12 +28,19 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNM-bF-KnS">
                                                 <rect key="frame" x="201.5" y="0.0" width="50.5" height="113"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downWhiteArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Gu6-Wu-uFr">
-                                                        <rect key="frame" x="5" y="35" width="40" height="40"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downWhiteArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Gu6-Wu-uFr">
+                                                        <rect key="frame" x="0.0" y="31.5" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="C5w-25-njH"/>
+                                                            <constraint firstAttribute="width" constant="50" id="UpA-V8-urh"/>
+                                                        </constraints>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.74117647060000003" green="0.18039215689999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="Gu6-Wu-uFr" firstAttribute="centerY" secondItem="YNM-bF-KnS" secondAttribute="centerY" id="Bn2-PT-aCx"/>
+                                                    <constraint firstItem="Gu6-Wu-uFr" firstAttribute="centerX" secondItem="YNM-bF-KnS" secondAttribute="centerX" id="ePM-9E-mTi"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,7 +88,20 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gi-x9-vG1">
                                                 <rect key="frame" x="201.5" y="0.0" width="50.5" height="113"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="upWhiteArrow" translatesAutoresizingMaskIntoConstraints="NO" id="w5a-1Y-vdg">
+                                                        <rect key="frame" x="0.0" y="31.5" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="JHR-7L-ORF"/>
+                                                            <constraint firstAttribute="width" constant="50" id="SMT-gP-aeI"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                </subviews>
                                                 <color key="backgroundColor" red="0.74117647060000003" green="0.18039215689999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="w5a-1Y-vdg" firstAttribute="centerY" secondItem="5gi-x9-vG1" secondAttribute="centerY" id="Zaj-ko-gIS"/>
+                                                    <constraint firstItem="w5a-1Y-vdg" firstAttribute="centerX" secondItem="5gi-x9-vG1" secondAttribute="centerX" id="shu-2y-4ta"/>
+                                                </constraints>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,5 +148,6 @@
     </scenes>
     <resources>
         <image name="downWhiteArrow" width="79" height="114"/>
+        <image name="upWhiteArrow" width="79" height="114"/>
     </resources>
 </document>
