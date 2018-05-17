@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Event 40</key>
+	<dict>
+		<key>name</key>
+		<string>Assassination of Abraham Lincoln</string>
+		<key>date</key>
+		<integer>1865</integer>
+	</dict>
+	<key>Event 39</key>
+	<dict>
+		<key>name</key>
+		<string>Slavery abolished in USA</string>
+		<key>date</key>
+		<integer>1863</integer>
+	</dict>
+	<key>Event 38</key>
+	<dict>
+		<key>name</key>
+		<string>Beginning of the American Civil War</string>
+		<key>date</key>
+		<integer>1861</integer>
+	</dict>
+	<key>Event 37</key>
+	<dict>
+		<key>name</key>
+		<string>Queen Victoria&apos;s accession to the throne of England</string>
+		<key>date</key>
+		<integer>1837</integer>
+	</dict>
+	<key>Event 36</key>
+	<dict>
+		<key>name</key>
+		<string>Reforms Bill passed in England</string>
+		<key>date</key>
+		<integer>1832</integer>
+	</dict>
+	<key>Event 35</key>
+	<dict>
+		<key>name</key>
+		<string>Death of Napolean</string>
+		<key>date</key>
+		<integer>1821</integer>
+	</dict>
+	<key>Event 34</key>
+	<dict>
+		<key>name</key>
+		<string>Battle of Waterloo</string>
+		<key>date</key>
+		<integer>1815</integer>
+	</dict>
+	<key>Event 33</key>
+	<dict>
+		<key>name</key>
+		<string>Battle of Trafalagar and Nelson&apos;s death</string>
+		<key>date</key>
+		<integer>1805</integer>
+	</dict>
+	<key>Event 32</key>
+	<dict>
+		<key>name</key>
+		<string>French Revolution</string>
+		<key>date</key>
+		<integer>1789</integer>
+	</dict>
+	<key>Event 31</key>
+	<dict>
+		<key>name</key>
+		<string>Declaration of American Independence</string>
+		<key>date</key>
+		<integer>1776</integer>
+	</dict>
+	<key>Event 30</key>
+	<dict>
+		<key>name</key>
+		<string>Union of England and Scotland</string>
+		<key>date</key>
+		<integer>1707</integer>
+	</dict>
+	<key>Event 29</key>
+	<dict>
+		<key>name</key>
+		<string>Battle of Blenheim</string>
+		<key>date</key>
+		<integer>1704</integer>
+	</dict>
+	<key>Event 28</key>
+	<dict>
+		<key>name</key>
+		<string>Glorious Revolution in England</string>
+		<key>date</key>
+		<integer>1668</integer>
+	</dict>
+	<key>Event 27</key>
+	<dict>
+		<key>name</key>
+		<string>The Great Plague of England</string>
+		<key>date</key>
+		<integer>1665</integer>
+	</dict>
+	<key>Event 26</key>
+	<dict>
+		<key>name</key>
+		<string>Monarchy restored in England</string>
+		<key>date</key>
+		<integer>1660</integer>
+	</dict>
+	<key>Event 25</key>
+	<dict>
+		<key>name</key>
+		<string>Execution of Charles I</string>
+		<key>date</key>
+		<integer>1649</integer>
+	</dict>
+	<key>Event 24</key>
+	<dict>
+		<key>name</key>
+		<string>British East India Company established in India</string>
+		<key>date</key>
+		<integer>1600</integer>
+	</dict>
+	<key>Event 23</key>
+	<dict>
+		<key>name</key>
+		<string>Spanish Armada defeated</string>
+		<key>date</key>
+		<integer>1588</integer>
+	</dict>
+	<key>Event 22</key>
+	<dict>
+		<key>name</key>
+		<string>Sea-route to India discovered by Vasco-de-Gama</string>
+		<key>date</key>
+		<integer>1498</integer>
+	</dict>
+	<key>Event 21</key>
+	<dict>
+		<key>name</key>
+		<string>Discovery of America by Columbus</string>
+		<key>date</key>
+		<integer>1492</integer>
+	</dict>
+	<key>Event 20</key>
+	<dict>
+		<key>name</key>
+		<string>Turks captured Constantinople</string>
+		<key>date</key>
+		<integer>1453</integer>
+	</dict>
+	<key>Event 19</key>
+	<dict>
+		<key>name</key>
+		<string>English faces Black Death Plague</string>
+		<key>date</key>
+		<integer>1348</integer>
+	</dict>
+	<key>Event 18</key>
+	<dict>
+		<key>name</key>
+		<string>The Hundred years War broke ou</string>
+		<key>date</key>
+		<integer>1338</integer>
+	</dict>
+	<key>Event 17</key>
+	<dict>
+		<key>name</key>
+		<string>Roger Bacon invents gunpowder</string>
+		<key>date</key>
+		<integer>1280</integer>
+	</dict>
+	<key>Event 16</key>
+	<dict>
+		<key>name</key>
+		<string>Norman invasion of England</string>
+		<key>date</key>
+		<integer>1066</integer>
+	</dict>
+	<key>Event 15</key>
+	<dict>
+		<key>name</key>
+		<string>Arabs invade Spain</string>
+		<key>date</key>
+		<integer>711</integer>
+	</dict>
+	<key>Event 14</key>
+	<dict>
+		<key>name</key>
+		<string>Death of Mohammed</string>
+		<key>date</key>
+		<integer>632</integer>
+	</dict>
+	<key>Event 13</key>
+	<dict>
+		<key>name</key>
+		<string>Flight of Mohammed from Mecca to Madina</string>
+		<key>date</key>
+		<integer>622</integer>
+	</dict>
+	<key>Event 12</key>
+	<dict>
+		<key>name</key>
+		<string>Prophet Mohammed born at Mecca</string>
+		<key>date</key>
+		<integer>570</integer>
+	</dict>
+	<key>Event 11</key>
+	<dict>
+		<key>name</key>
+		<string>Huns&apos; invasion of Europe</string>
+		<key>date</key>
+		<integer>375</integer>
+	</dict>
+	<key>Event 10</key>
+	<dict>
+		<key>name</key>
+		<string>Crucifixion of Jesus Christ</string>
+		<key>date</key>
+		<integer>29</integer>
+	</dict>
+	<key>Event 9</key>
+	<dict>
+		<key>name</key>
+		<string>Birth of Jesus Christ</string>
+		<key>date</key>
+		<integer>-4</integer>
+	</dict>
+	<key>Event 8</key>
+	<dict>
+		<key>name</key>
+		<string>Julius Ceasar attacks Great Britain</string>
+		<key>date</key>
+		<integer>-55</integer>
+	</dict>
+	<key>Event 7</key>
+	<dict>
+		<key>name</key>
+		<string>Work on the Great Wall of China begins</string>
+		<key>date</key>
+		<integer>-214</integer>
+	</dict>
+	<key>Event 6</key>
+	<dict>
+		<key>name</key>
+		<string>Alexander dies at Babylon</string>
+		<key>date</key>
+		<integer>-323</integer>
+	</dict>
+	<key>Event 5</key>
+	<dict>
+		<key>name</key>
+		<string>Egypt conquered by Alexander</string>
+		<key>date</key>
+		<integer>-332</integer>
+	</dict>
+	<key>Event 4</key>
+	<dict>
+		<key>name</key>
+		<string>The period of Aristotle and Plato</string>
+		<key>date</key>
+		<integer>-360</integer>
+	</dict>
+	<key>Event 3</key>
+	<dict>
+		<key>name</key>
+		<string>Greeks defeated the Persians at the Battle of Marathon</string>
+		<key>date</key>
+		<integer>-490</integer>
+	</dict>
+	<key>Event 2</key>
+	<dict>
+		<key>name</key>
+		<string>Foundation of Rome</string>
+		<key>date</key>
+		<integer>-753</integer>
+	</dict>
+	<key>Event 1</key>
+	<dict>
+		<key>name</key>
+		<string>First Olympiad in Greece</string>
+		<key>date</key>
+		<integer>-776</integer>
+	</dict>
+	<key>Event 0</key>
+	<dict>
+		<key>name</key>
+		<string>Building of the Great Pyramid</string>
+		<key>date</key>
+		<integer>-3000</integer>
+	</dict>
+</dict>
+</plist>
