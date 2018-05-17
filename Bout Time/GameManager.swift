@@ -19,3 +19,14 @@ struct HistoricalEventStruct: HistoricalEventProtocol {
     let name: String
     let year: Int
 }
+
+
+// MARK: - Game Manager Protocol
+protocol GameManagerProtocol {
+    var questionsDictionary: [HistoricalEventStruct] { get }
+    var gameScore: Int { get set }
+    var timer: Int { get set }
+    
+    func checkAnswer(from question: HistoricalEventStruct, with answer: String) -> Bool
+    func setIsGameOver(gameScore: Int, timer: Int) -> Bool
+}
