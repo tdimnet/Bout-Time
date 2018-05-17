@@ -13,6 +13,8 @@
 		492FE07B20A9E24B0012A71A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 492FE07A20A9E24B0012A71A /* Assets.xcassets */; };
 		492FE07E20A9E24B0012A71A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492FE07C20A9E24B0012A71A /* LaunchScreen.storyboard */; };
 		497A88D720ADD8D300116CBC /* HistoricalEvents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 497A88D620ADD8D300116CBC /* HistoricalEvents.plist */; };
+		497A88D920ADF55D00116CBC /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A88D820ADF55D00116CBC /* GameManager.swift */; };
+		497A88DB20ADF57100116CBC /* PlistConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A88DA20ADF57100116CBC /* PlistConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		492FE07D20A9E24B0012A71A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		492FE07F20A9E24B0012A71A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		497A88D620ADD8D300116CBC /* HistoricalEvents.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HistoricalEvents.plist; sourceTree = "<group>"; };
+		497A88D820ADF55D00116CBC /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		497A88DA20ADF57100116CBC /* PlistConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistConverter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				492FE07C20A9E24B0012A71A /* LaunchScreen.storyboard */,
 				492FE07F20A9E24B0012A71A /* Info.plist */,
 				497A88D620ADD8D300116CBC /* HistoricalEvents.plist */,
+				497A88D820ADF55D00116CBC /* GameManager.swift */,
+				497A88DA20ADF57100116CBC /* PlistConverter.swift */,
 			);
 			path = "Bout Time";
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				492FE07620A9E24A0012A71A /* ViewController.swift in Sources */,
+				497A88D920ADF55D00116CBC /* GameManager.swift in Sources */,
 				492FE07420A9E24A0012A71A /* AppDelegate.swift in Sources */,
+				497A88DB20ADF57100116CBC /* PlistConverter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
