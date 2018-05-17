@@ -2,6 +2,48 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>Event 40</key>
+	<dict>
+		<key>name</key>
+		<string>Assassination of Abraham Lincoln</string>
+		<key>date</key>
+		<integer>1865</integer>
+	</dict>
+	<key>Event 39</key>
+	<dict>
+		<key>name</key>
+		<string>Slavery abolished in USA</string>
+		<key>date</key>
+		<integer>1863</integer>
+	</dict>
+	<key>Event 38</key>
+	<dict>
+		<key>name</key>
+		<string>Beginning of the American Civil War</string>
+		<key>date</key>
+		<integer>1861</integer>
+	</dict>
+	<key>Event 37</key>
+	<dict>
+		<key>name</key>
+		<string>Queen Victoria&apos;s accession to the throne of England</string>
+		<key>date</key>
+		<integer>1837</integer>
+	</dict>
+	<key>Event 36</key>
+	<dict>
+		<key>name</key>
+		<string>Reforms Bill passed in England</string>
+		<key>date</key>
+		<integer>1832</integer>
+	</dict>
+	<key>Event 35</key>
+	<dict>
+		<key>name</key>
+		<string>Death of Napolean</string>
+		<key>date</key>
+		<integer>1821</integer>
+	</dict>
 	<key>Event 34</key>
 	<dict>
 		<key>name</key>
