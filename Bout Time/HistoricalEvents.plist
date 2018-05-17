@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Money Invention</key>
+	<dict>
+		<key>name</key>
+		<string>Invention of the Money</string>
+		<key>date</key>
+		<integer>-600</integer>
+	</dict>
+	<key>Wheel Invention</key>
+	<dict>
+		<key>name</key>
+		<string>Invention of the wheel</string>
+		<key>date</key>
+		<integer>-3500</integer>
+	</dict>
+</dict>
+</plist>
