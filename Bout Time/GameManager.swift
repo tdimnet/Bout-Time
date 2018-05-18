@@ -14,6 +14,7 @@ protocol HistoricalEventProtocol {
     var year: Int { get }
 }
 
+
 // MARK: - Historical Event Struct
 struct HistoricalEventStruct: HistoricalEventProtocol {
     let name: String
@@ -23,10 +24,29 @@ struct HistoricalEventStruct: HistoricalEventProtocol {
 
 // MARK: - Game Manager Protocol
 protocol GameManagerProtocol {
-    var questionsDictionary: [HistoricalEventStruct] { get }
+    var questionsDictionary: [HistoricalEventStruct] { get set }
     var gameScore: Int { get set }
     var timer: Int { get set }
     
     func checkAnswer(from question: HistoricalEventStruct, with answer: String) -> Bool
     func setIsGameOver(gameScore: Int, timer: Int) -> Bool
+}
+
+class GameManager: GameManagerProtocol {
+    var questionsDictionary: [HistoricalEventStruct]
+    
+    var gameScore: Int = 0
+    var timer: Int = 20
+    
+    required init(dictionary: [HistoricalEventStruct]) {
+        self.questionsDictionary = dictionary
+    }
+    
+    func checkAnswer(from question: HistoricalEventStruct, with answer: String) -> Bool {
+        return true
+    }
+    
+    func setIsGameOver(gameScore: Int, timer: Int) -> Bool {
+        return true
+    }
 }

@@ -10,11 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var game: GameManager
+    
     required init?(coder aDecoder: NSCoder) {
         do {
             let dictionary = try PlistConverter.dictionary(fromFile: "HistoricalEvents", ofType: "plist")
-            let inventory = try HistoricalEventsUnarchiver.historicalEventsInventory(fromDictionary: dictionary)
-            
+            guard let inventory: [HistoricalEventStruct] = try HistoricalEventsUnarchiver.historicalEventsInventory(fromDictionary: dictionary) as? [HistoricalEventStruct] else {
+                // FIXME: Add a better work for the inventory
+                fatalError()
+            }
+            self.game = GameManager(dictionary: inventory)
         } catch let error {
             fatalError("\(error)")
         }
@@ -25,6 +30,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        print(game.questionsDictionary)
     }
 
     override func didReceiveMemoryWarning() {
