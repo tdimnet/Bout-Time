@@ -9,6 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    required init?(coder aDecoder: NSCoder) {
+        do {
+            let dictionary = try PlistConverter.dictionary(fromFile: "HistoricalEvents", ofType: "plist")
+            print("\(dictionary)")
+        } catch let error {
+            fatalError("\(error)")
+        }
+        
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
