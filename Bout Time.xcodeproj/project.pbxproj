@@ -12,6 +12,7 @@
 		492FE07920A9E24A0012A71A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492FE07720A9E24A0012A71A /* Main.storyboard */; };
 		492FE07B20A9E24B0012A71A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 492FE07A20A9E24B0012A71A /* Assets.xcassets */; };
 		492FE07E20A9E24B0012A71A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 492FE07C20A9E24B0012A71A /* LaunchScreen.storyboard */; };
+		4939F7DF20AF48ED0012AB3C /* HistoricalEventsUnarchiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4939F7DE20AF48ED0012AB3C /* HistoricalEventsUnarchiver.swift */; };
 		497A88D720ADD8D300116CBC /* HistoricalEvents.plist in Resources */ = {isa = PBXBuildFile; fileRef = 497A88D620ADD8D300116CBC /* HistoricalEvents.plist */; };
 		497A88D920ADF55D00116CBC /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A88D820ADF55D00116CBC /* GameManager.swift */; };
 		497A88DB20ADF57100116CBC /* PlistConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497A88DA20ADF57100116CBC /* PlistConverter.swift */; };
@@ -25,6 +26,7 @@
 		492FE07A20A9E24B0012A71A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		492FE07D20A9E24B0012A71A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		492FE07F20A9E24B0012A71A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4939F7DE20AF48ED0012AB3C /* HistoricalEventsUnarchiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalEventsUnarchiver.swift; sourceTree = "<group>"; };
 		497A88D620ADD8D300116CBC /* HistoricalEvents.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = HistoricalEvents.plist; sourceTree = "<group>"; };
 		497A88D820ADF55D00116CBC /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		497A88DA20ADF57100116CBC /* PlistConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistConverter.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				497A88D620ADD8D300116CBC /* HistoricalEvents.plist */,
 				497A88D820ADF55D00116CBC /* GameManager.swift */,
 				497A88DA20ADF57100116CBC /* PlistConverter.swift */,
+				4939F7DE20AF48ED0012AB3C /* HistoricalEventsUnarchiver.swift */,
 			);
 			path = "Bout Time";
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				497A88D920ADF55D00116CBC /* GameManager.swift in Sources */,
 				492FE07420A9E24A0012A71A /* AppDelegate.swift in Sources */,
 				497A88DB20ADF57100116CBC /* PlistConverter.swift in Sources */,
+				4939F7DF20AF48ED0012AB3C /* HistoricalEventsUnarchiver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

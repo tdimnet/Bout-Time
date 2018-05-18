@@ -13,7 +13,8 @@ class ViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         do {
             let dictionary = try PlistConverter.dictionary(fromFile: "HistoricalEvents", ofType: "plist")
-            print("\(dictionary)")
+            let inventory = try HistoricalEventsUnarchiver.historicalEventsInventory(fromDictionary: dictionary)
+            
         } catch let error {
             fatalError("\(error)")
         }
