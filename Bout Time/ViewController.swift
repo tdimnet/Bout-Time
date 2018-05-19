@@ -45,6 +45,36 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func gameStart() -> Void {
+        
+    }
+    
+    func displayQuestion() -> Void {
+        
+    }
+    
+    func displayScore() -> Void {
+        
+    }
+    
+    func nextRound() -> Void {
+        
+    }
 
+    func startTimer() -> Void {
+        
+    }
+    
+    func stopTimer() -> Void {
+        
+    }
+    
+    func timerIsRunning() -> Void {
+        
+    }
+    
+    func timeOut() -> Void {
+        
+    }
 }
 
