@@ -10,16 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    // Class properties
     var game: GameManager
+    
+    // Global variables
+    var questions: [HistoricalEventStruct] = []
+    
+    // IB
     
     required init?(coder aDecoder: NSCoder) {
         do {
             let dictionary = try PlistConverter.dictionary(fromFile: "HistoricalEvents", ofType: "plist")
-            guard let inventory: [HistoricalEventStruct] = try HistoricalEventsUnarchiver.historicalEventsInventory(fromDictionary: dictionary) as? [HistoricalEventStruct] else {
+            guard let historicalEventsinventory: [HistoricalEventStruct] = try HistoricalEventsUnarchiver.historicalEventsInventory(fromDictionary: dictionary) as? [HistoricalEventStruct] else {
                 // FIXME: Add a better work for the inventory
                 fatalError()
             }
-            self.game = GameManager(dictionary: inventory)
+            self.game = GameManager(dictionary: historicalEventsinventory)
         } catch let error {
             fatalError("\(error)")
         }
@@ -30,7 +36,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        print(game.questionsDictionary)
+        questions = game.questionsDictionary
+        print(questions)
     }
 
     override func didReceiveMemoryWarning() {
