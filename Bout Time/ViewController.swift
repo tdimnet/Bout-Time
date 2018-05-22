@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 class ViewController: UIViewController {
     
@@ -51,7 +52,28 @@ class ViewController: UIViewController {
     }
     
     func displayQuestion() -> Void {
-        print("Start displaying questions")
+        print("Start displaying questions\n")
+        
+        var randomSelectedQuestions: [HistoricalEventStruct] = []
+        
+        print("Questions count: \(questions.count)")
+        
+        
+        for _ in 0..<4 {
+            let randomIndex: Int = GKRandomSource.sharedRandom().nextInt(upperBound: questions.count)
+            
+            // Adding the 4 questions to the randomSelectedQuestions
+            randomSelectedQuestions.append(questions[randomIndex])
+            
+            // And removing the 4 questions from the questions array
+            questions.remove(at: randomIndex)
+        }
+        
+        
+        // Display them just to be sure the count has dicreased
+        print(randomSelectedQuestions)
+        print("Questions count: \(questions.count)")
+        
     }
     
     func displayScore() -> Void {
