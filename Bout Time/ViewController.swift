@@ -60,7 +60,11 @@ class ViewController: UIViewController {
     // MARK: displayEvents Function
     func displayEvents() -> Void {
         let choosenEvents: [HistoricalEventStruct] = chooseEvents()
-        print(choosenEvents)
+        
+        firstEvent.text = choosenEvents[0].name
+        secondEvent.text = choosenEvents[1].name
+        thirdEvent.text = choosenEvents[2].name
+        fourthEvent.text = choosenEvents[3].name
     }
     
     // MARK: chooseEvents Function
