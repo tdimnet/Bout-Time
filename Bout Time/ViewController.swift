@@ -18,6 +18,11 @@ class ViewController: UIViewController {
     var events: [HistoricalEventStruct] = []
     
     // IB
+    @IBOutlet weak var firstEvent: UILabel!
+    @IBOutlet weak var secondEvent: UILabel!
+    @IBOutlet weak var thirdEvent: UILabel!
+    @IBOutlet weak var fourthEvent: UILabel!
+    
     
     required init?(coder aDecoder: NSCoder) {
         do {
@@ -45,30 +50,40 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: gameStart Function
     func gameStart() -> Void {
         // Fill in the questions array
         events = game.questionsDictionary
         displayEvents()
     }
     
+    // MARK: displayEvents Function
     func displayEvents() -> Void {
-        var randomSelectedQuestions: [HistoricalEventStruct] = []
+        let choosenEvents: [HistoricalEventStruct] = chooseEvents()
+        print(choosenEvents)
+    }
+    
+    // MARK: chooseEvents Function
+    func chooseEvents() -> [HistoricalEventStruct] {
+        var randomSelectedEvents: [HistoricalEventStruct] = []
         for _ in 0..<4 {
             let randomIndex: Int = GKRandomSource.sharedRandom().nextInt(upperBound: events.count)
             
             // Adding the 4 questions to the randomSelectedQuestions
-            randomSelectedQuestions.append(events[randomIndex])
+            randomSelectedEvents.append(events[randomIndex])
             
             // And removing the 4 questions from the questions array
             events.remove(at: randomIndex)
         }
-        print(randomSelectedQuestions)
+        return randomSelectedEvents
     }
     
+    // MARK: displayScore function
     func displayScore() -> Void {
         
     }
     
+    // MARK: nextRound Function
     func nextRound() -> Void {
         if game.questionsAsked == game.questionsAsked {
             displayScore()
@@ -77,18 +92,22 @@ class ViewController: UIViewController {
         }
     }
 
+    // MARK: startTimer function
     func startTimer() -> Void {
         
     }
     
+    // MARK: stopTimer Function
     func stopTimer() -> Void {
         
     }
     
+    // MARK: timerIsRunning Function
     func timerIsRunning() -> Void {
         
     }
     
+    // MARK: timeOut Function
     func timeOut() -> Void {
         
     }

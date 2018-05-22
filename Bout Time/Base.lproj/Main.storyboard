@@ -229,6 +229,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstEvent" destination="jzJ-QK-kfO" id="AGP-cX-rtE"/>
+                        <outlet property="fourthEvent" destination="blO-vV-WIp" id="WVN-lW-WFF"/>
+                        <outlet property="secondEvent" destination="q9Y-Ft-sdU" id="xUs-Al-etC"/>
+                        <outlet property="thirdEvent" destination="kMu-K7-IcC" id="4dk-qL-Zag"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
