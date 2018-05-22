@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 class ViewController: UIViewController {
     
@@ -14,7 +15,7 @@ class ViewController: UIViewController {
     var game: GameManager
     
     // Global variables
-    var questions: [HistoricalEventStruct] = []
+    var events: [HistoricalEventStruct] = []
     
     // IB
     
@@ -25,7 +26,7 @@ class ViewController: UIViewController {
                 // FIXME: Add a better work for the inventory
                 fatalError()
             }
-            self.game = GameManager(dictionary: historicalEventsinventory)
+            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 5, questionsAsked: 0)
         } catch let error {
             fatalError("\(error)")
         }
@@ -36,8 +37,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        questions = game.questionsDictionary
-        print(questions)
+        gameStart()
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,6 +45,52 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func gameStart() -> Void {
+        // Fill in the questions array
+        events = game.questionsDictionary
+        displayEvents()
+    }
+    
+    func displayEvents() -> Void {
+        var randomSelectedQuestions: [HistoricalEventStruct] = []
+        for _ in 0..<4 {
+            let randomIndex: Int = GKRandomSource.sharedRandom().nextInt(upperBound: events.count)
+            
+            // Adding the 4 questions to the randomSelectedQuestions
+            randomSelectedQuestions.append(events[randomIndex])
+            
+            // And removing the 4 questions from the questions array
+            events.remove(at: randomIndex)
+        }
+        print(randomSelectedQuestions)
+    }
+    
+    func displayScore() -> Void {
+        
+    }
+    
+    func nextRound() -> Void {
+        if game.questionsAsked == game.questionsAsked {
+            displayScore()
+        } else {
+            displayEvents()
+        }
+    }
 
+    func startTimer() -> Void {
+        
+    }
+    
+    func stopTimer() -> Void {
+        
+    }
+    
+    func timerIsRunning() -> Void {
+        
+    }
+    
+    func timeOut() -> Void {
+        
+    }
 }
 
