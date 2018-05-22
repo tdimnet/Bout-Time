@@ -52,13 +52,7 @@ class ViewController: UIViewController {
     }
     
     func displayEvents() -> Void {
-        print("Start displaying questions\n")
-        
         var randomSelectedQuestions: [HistoricalEventStruct] = []
-        
-        print("Questions count: \(events.count)")
-        
-        
         for _ in 0..<4 {
             let randomIndex: Int = GKRandomSource.sharedRandom().nextInt(upperBound: events.count)
             
@@ -68,12 +62,7 @@ class ViewController: UIViewController {
             // And removing the 4 questions from the questions array
             events.remove(at: randomIndex)
         }
-        
-        
-        // Display them just to be sure the count has dicreased
         print(randomSelectedQuestions)
-        print("Events count: \(events.count)")
-        
     }
     
     func displayScore() -> Void {
