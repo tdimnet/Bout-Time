@@ -37,7 +37,7 @@ protocol GameManagerProtocol {
 
 
 // MARK: - Game Manager Class
-class GameManager: GameManagerProtocol {
+struct GameManager: GameManagerProtocol {
     var questionsDictionary: [HistoricalEventStruct]
     
     var gameScore: Int
@@ -45,13 +45,13 @@ class GameManager: GameManagerProtocol {
     let questionsPerRound: Int
     var numberOfCorrectQuestions: Int
     
-    required init(dictionary: [HistoricalEventStruct], gameScore: Int, timer: Int, questionsPerRound: Int, numberOfCorrectQuestions: Int) {
-        self.questionsDictionary = dictionary
-        self.gameScore = gameScore
-        self.timer = timer
-        self.questionsPerRound = questionsPerRound
-        self.numberOfCorrectQuestions =  numberOfCorrectQuestions
-    }
+//    init(dictionary: [HistoricalEventStruct], gameScore: Int, timer: Int, questionsPerRound: Int, numberOfCorrectQuestions: Int) {
+//        self.questionsDictionary = dictionary
+//        self.gameScore = gameScore
+//        self.timer = timer
+//        self.questionsPerRound = questionsPerRound
+//        self.numberOfCorrectQuestions =  numberOfCorrectQuestions
+//    }
     
     func checkAnswer(from question: HistoricalEventStruct, with answer: String) -> Bool {
         return true

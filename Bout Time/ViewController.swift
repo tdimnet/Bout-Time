@@ -25,19 +25,17 @@ class ViewController: UIViewController {
                 // FIXME: Add a better work for the inventory
                 fatalError()
             }
-            self.game = GameManager(dictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 5, numberOfCorrectQuestions: 0)
+            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 5, numberOfCorrectQuestions: 0)
+            super.init(coder: aDecoder)
         } catch let error {
             fatalError("\(error)")
         }
-        
-        super.init(coder: aDecoder)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        questions = game.questionsDictionary
-        print(questions)
+        gameStart()
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +44,9 @@ class ViewController: UIViewController {
     }
 
     func gameStart() -> Void {
-        
+        // Fill in the questions array
+        questions = game.questionsDictionary
+        print(questions)
     }
     
     func displayQuestion() -> Void {
