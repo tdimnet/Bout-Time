@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var game: GameManager
     
     // Global variables
-    var questions: [HistoricalEventStruct] = []
+    var events: [HistoricalEventStruct] = []
     
     // IB
     
@@ -47,32 +47,32 @@ class ViewController: UIViewController {
 
     func gameStart() -> Void {
         // Fill in the questions array
-        questions = game.questionsDictionary
-        displayQuestion()
+        events = game.questionsDictionary
+        displayEvents()
     }
     
-    func displayQuestion() -> Void {
+    func displayEvents() -> Void {
         print("Start displaying questions\n")
         
         var randomSelectedQuestions: [HistoricalEventStruct] = []
         
-        print("Questions count: \(questions.count)")
+        print("Questions count: \(events.count)")
         
         
         for _ in 0..<4 {
-            let randomIndex: Int = GKRandomSource.sharedRandom().nextInt(upperBound: questions.count)
+            let randomIndex: Int = GKRandomSource.sharedRandom().nextInt(upperBound: events.count)
             
             // Adding the 4 questions to the randomSelectedQuestions
-            randomSelectedQuestions.append(questions[randomIndex])
+            randomSelectedQuestions.append(events[randomIndex])
             
             // And removing the 4 questions from the questions array
-            questions.remove(at: randomIndex)
+            events.remove(at: randomIndex)
         }
         
         
         // Display them just to be sure the count has dicreased
         print(randomSelectedQuestions)
-        print("Questions count: \(questions.count)")
+        print("Events count: \(events.count)")
         
     }
     
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
         if game.questionsAsked == game.questionsAsked {
             displayScore()
         } else {
-            displayQuestion()
+            displayEvents()
         }
     }
 
