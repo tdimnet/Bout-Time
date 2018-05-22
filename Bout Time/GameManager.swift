@@ -28,6 +28,8 @@ protocol GameManagerProtocol {
     
     var gameScore: Int { get set }
     var timer: Int { get set }
+    var questionsPerRound: Int { get }
+    var numberOfCorrectQuestions: Int { get set }
     
     func checkAnswer(from question: HistoricalEventStruct, with answer: String) -> Bool
     func setIsGameOver(gameScore: Int, timer: Int) -> Bool
@@ -38,11 +40,17 @@ protocol GameManagerProtocol {
 class GameManager: GameManagerProtocol {
     var questionsDictionary: [HistoricalEventStruct]
     
-    var gameScore: Int = 0
-    var timer: Int = 20
+    var gameScore: Int
+    var timer: Int
+    let questionsPerRound: Int
+    var numberOfCorrectQuestions: Int
     
-    required init(dictionary: [HistoricalEventStruct]) {
+    required init(dictionary: [HistoricalEventStruct], gameScore: Int, timer: Int, questionsPerRound: Int, numberOfCorrectQuestions: Int) {
         self.questionsDictionary = dictionary
+        self.gameScore = gameScore
+        self.timer = timer
+        self.questionsPerRound = questionsPerRound
+        self.numberOfCorrectQuestions =  numberOfCorrectQuestions
     }
     
     func checkAnswer(from question: HistoricalEventStruct, with answer: String) -> Bool {

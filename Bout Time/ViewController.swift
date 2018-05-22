@@ -25,7 +25,7 @@ class ViewController: UIViewController {
                 // FIXME: Add a better work for the inventory
                 fatalError()
             }
-            self.game = GameManager(dictionary: historicalEventsinventory)
+            self.game = GameManager(dictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 5, numberOfCorrectQuestions: 0)
         } catch let error {
             fatalError("\(error)")
         }
