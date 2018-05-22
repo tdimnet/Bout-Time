@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GameKit
 
 class ViewController: UIViewController {
     
@@ -14,7 +15,7 @@ class ViewController: UIViewController {
     var game: GameManager
     
     // Global variables
-    var questions: [HistoricalEventStruct] = []
+    var events: [HistoricalEventStruct] = []
     
     // IB
     
@@ -46,12 +47,22 @@ class ViewController: UIViewController {
 
     func gameStart() -> Void {
         // Fill in the questions array
-        questions = game.questionsDictionary
-        displayQuestion()
+        events = game.questionsDictionary
+        displayEvents()
     }
     
-    func displayQuestion() -> Void {
-        print("Start displaying questions")
+    func displayEvents() -> Void {
+        var randomSelectedQuestions: [HistoricalEventStruct] = []
+        for _ in 0..<4 {
+            let randomIndex: Int = GKRandomSource.sharedRandom().nextInt(upperBound: events.count)
+            
+            // Adding the 4 questions to the randomSelectedQuestions
+            randomSelectedQuestions.append(events[randomIndex])
+            
+            // And removing the 4 questions from the questions array
+            events.remove(at: randomIndex)
+        }
+        print(randomSelectedQuestions)
     }
     
     func displayScore() -> Void {
@@ -62,7 +73,7 @@ class ViewController: UIViewController {
         if game.questionsAsked == game.questionsAsked {
             displayScore()
         } else {
-            displayQuestion()
+            displayEvents()
         }
     }
 
