@@ -25,11 +25,12 @@ class ViewController: UIViewController {
                 // FIXME: Add a better work for the inventory
                 fatalError()
             }
-            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 5, numberOfCorrectQuestions: 0)
-            super.init(coder: aDecoder)
+            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 5, questionsAsked: 0)
         } catch let error {
             fatalError("\(error)")
         }
+        
+        super.init(coder: aDecoder)
     }
 
     override func viewDidLoad() {
@@ -46,11 +47,11 @@ class ViewController: UIViewController {
     func gameStart() -> Void {
         // Fill in the questions array
         questions = game.questionsDictionary
-        print(questions)
+        displayQuestion()
     }
     
     func displayQuestion() -> Void {
-        
+        print("Start displaying questions")
     }
     
     func displayScore() -> Void {
@@ -58,7 +59,11 @@ class ViewController: UIViewController {
     }
     
     func nextRound() -> Void {
-        
+        if game.questionsAsked == game.questionsAsked {
+            displayScore()
+        } else {
+            displayQuestion()
+        }
     }
 
     func startTimer() -> Void {
