@@ -16,8 +16,23 @@ class ViewController: UIViewController {
     
     // Global variables
     var events: [HistoricalEventStruct] = []
+    var choosenEvents: [HistoricalEventStruct] = []
+    var eventsTextLabel: [UILabel] = []
     
-    // IB
+    // Text Label
+    @IBOutlet weak var firstEvent: UILabel!
+    @IBOutlet weak var secondEvent: UILabel!
+    @IBOutlet weak var thirdEvent: UILabel!
+    @IBOutlet weak var fourthEvent: UILabel!
+    
+    // Button
+    @IBOutlet weak var firstEventDownButton: UIButton!
+    @IBOutlet weak var secondEventUpButton: UIButton!
+    @IBOutlet weak var secondEventDownButton: UIButton!
+    @IBOutlet weak var thirdEventUpButton: UIButton!
+    @IBOutlet weak var thirdEventDownButton: UIButton!
+    @IBOutlet weak var fourthEventUpButton: UIButton!
+    
     
     required init?(coder aDecoder: NSCoder) {
         do {
@@ -44,31 +59,59 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: Shaking Event
+    override func becomeFirstResponder() -> Bool {
+        return true
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            displayEvents()
+        }
+    }
 
+    // MARK: gameStart Function
     func gameStart() -> Void {
         // Fill in the questions array
         events = game.questionsDictionary
         displayEvents()
     }
     
+    // MARK: displayEvents Function
     func displayEvents() -> Void {
-        var randomSelectedQuestions: [HistoricalEventStruct] = []
+        choosenEvents = chooseEvents()
+        
+        // Create the array of labels
+        eventsTextLabel = [firstEvent, secondEvent, thirdEvent, fourthEvent]
+        
+        // Fill in the array
+        for index in 0..<choosenEvents.count {
+            eventsTextLabel[index].text = choosenEvents[index].name
+        }
+    }
+    
+    // MARK: chooseEvents Function
+    func chooseEvents() -> [HistoricalEventStruct] {
+        var randomSelectedEvents: [HistoricalEventStruct] = []
         for _ in 0..<4 {
             let randomIndex: Int = GKRandomSource.sharedRandom().nextInt(upperBound: events.count)
             
             // Adding the 4 questions to the randomSelectedQuestions
-            randomSelectedQuestions.append(events[randomIndex])
+            randomSelectedEvents.append(events[randomIndex])
             
             // And removing the 4 questions from the questions array
             events.remove(at: randomIndex)
         }
-        print(randomSelectedQuestions)
+        return randomSelectedEvents
     }
     
+    // MARK: displayScore function
     func displayScore() -> Void {
         
     }
     
+    // MARK: nextRound Function
     func nextRound() -> Void {
         if game.questionsAsked == game.questionsAsked {
             displayScore()
@@ -77,20 +120,56 @@ class ViewController: UIViewController {
         }
     }
 
+    // MARK: startTimer function
     func startTimer() -> Void {
         
     }
     
+    // MARK: stopTimer Function
     func stopTimer() -> Void {
         
     }
     
+    // MARK: timerIsRunning Function
     func timerIsRunning() -> Void {
         
     }
     
+    // MARK: timeOut Function
     func timeOut() -> Void {
         
+    }
+    
+    // FIXME: Will need to put this in an other file
+    enum Directions {
+        case up
+        case down
+    }
+    
+    // MARK: Up and Down Label
+    func updateEvents(to direction: Directions, from tag: Int) -> Void {
+        print("Direction: \(direction), tag: \(tag)")
+        if direction == Directions.up {
+            let forwardEvent = eventsTextLabel[tag - 1].text
+            let backwardEvent = eventsTextLabel[tag].text
+            
+            eventsTextLabel[tag - 1].text = backwardEvent
+            eventsTextLabel[tag].text = forwardEvent
+        } else {
+            let forwardEvent = eventsTextLabel[tag].text
+            let backwardEvent = eventsTextLabel[tag + 1].text
+            
+            eventsTextLabel[tag].text = backwardEvent
+            eventsTextLabel[tag + 1].text = forwardEvent
+        }
+    }
+    
+    @IBAction func downButtonPressed(_ sender: UIButton) -> Void {
+        updateEvents(to: Directions.down, from: sender.tag)
+    }
+    
+    @IBAction func upButtonPressed(_ sender: UIButton) {
+        updateEvents(to: Directions.up, from: sender.tag)
     }
 }
 

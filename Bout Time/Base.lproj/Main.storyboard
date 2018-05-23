@@ -42,6 +42,9 @@
                                                         </state>
                                                         <state key="selected" image="backgroundUpSelected"/>
                                                         <state key="highlighted" image="down_full_selected"/>
+                                                        <connections>
+                                                            <action selector="downButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3PB-Oc-6TD"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -70,15 +73,21 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAG-iA-k8i" userLabel="ArrowsView">
                                                 <rect key="frame" x="201" y="0.0" width="51" height="103.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3G-8B-Qxj">
+                                                    <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3G-8B-Qxj">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="51.5"/>
                                                         <state key="normal" image="up_half"/>
                                                         <state key="highlighted" image="up_half_selected"/>
+                                                        <connections>
+                                                            <action selector="upButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jye-IB-uo2"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSX-Uy-EEd">
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSX-Uy-EEd">
                                                         <rect key="frame" x="0.0" y="51.5" width="51" height="52"/>
                                                         <state key="normal" image="down_half"/>
                                                         <state key="highlighted" image="down_half_selected"/>
+                                                        <connections>
+                                                            <action selector="downButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FqH-bQ-sbV"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -116,15 +125,21 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H3R-Zy-rpk" userLabel="ArrowsView">
                                                 <rect key="frame" x="201" y="0.0" width="51" height="103.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQV-bD-0QQ">
+                                                    <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQV-bD-0QQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="51.5"/>
                                                         <state key="normal" image="up_half"/>
                                                         <state key="highlighted" image="up_half_selected"/>
+                                                        <connections>
+                                                            <action selector="upButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9fh-gn-kfz"/>
+                                                        </connections>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqz-05-e9L">
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqz-05-e9L">
                                                         <rect key="frame" x="0.0" y="52.5" width="51" height="51"/>
                                                         <state key="normal" image="down_half"/>
                                                         <state key="highlighted" image="down_half_selected"/>
+                                                        <connections>
+                                                            <action selector="downButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VXd-5R-6Yd"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -162,7 +177,7 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5gi-x9-vG1">
                                                 <rect key="frame" x="201" y="0.0" width="51" height="103.5"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbd-r6-2vQ">
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbd-r6-2vQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="103.5"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="up_full">
@@ -170,6 +185,9 @@
                                                         </state>
                                                         <state key="selected" image="backgroundUpSelected"/>
                                                         <state key="highlighted" image="up_full_selected"/>
+                                                        <connections>
+                                                            <action selector="upButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lHB-Bo-DJA"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -229,6 +247,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="firstEvent" destination="jzJ-QK-kfO" id="AGP-cX-rtE"/>
+                        <outlet property="firstEventDownButton" destination="s3n-y9-2uK" id="fHu-ij-eKr"/>
+                        <outlet property="fourthEvent" destination="blO-vV-WIp" id="WVN-lW-WFF"/>
+                        <outlet property="fourthEventUpButton" destination="sbd-r6-2vQ" id="9FW-qH-zm4"/>
+                        <outlet property="secondEvent" destination="q9Y-Ft-sdU" id="xUs-Al-etC"/>
+                        <outlet property="secondEventDownButton" destination="jSX-Uy-EEd" id="dmz-e6-hRB"/>
+                        <outlet property="secondEventUpButton" destination="T3G-8B-Qxj" id="F5V-vV-0zI"/>
+                        <outlet property="thirdEvent" destination="kMu-K7-IcC" id="4dk-qL-Zag"/>
+                        <outlet property="thirdEventDownButton" destination="yqz-05-e9L" id="HEM-Ey-teF"/>
+                        <outlet property="thirdEventUpButton" destination="QQV-bD-0QQ" id="dpS-cA-1F7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
