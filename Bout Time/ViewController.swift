@@ -16,6 +16,8 @@ class ViewController: UIViewController {
     
     // Global variables
     var events: [HistoricalEventStruct] = []
+    var choosenEvents: [HistoricalEventStruct] = []
+    var eventsTextLabel: [UILabel] = []
     
     // Text Label
     @IBOutlet weak var firstEvent: UILabel!
@@ -78,12 +80,15 @@ class ViewController: UIViewController {
     
     // MARK: displayEvents Function
     func displayEvents() -> Void {
-        let choosenEvents: [HistoricalEventStruct] = chooseEvents()
+        choosenEvents = chooseEvents()
         
-        firstEvent.text = choosenEvents[0].name
-        secondEvent.text = choosenEvents[1].name
-        thirdEvent.text = choosenEvents[2].name
-        fourthEvent.text = choosenEvents[3].name
+        // Create the array of labels
+        eventsTextLabel = [firstEvent, secondEvent, thirdEvent, fourthEvent]
+        
+        // Fill in the array
+        for index in 0..<choosenEvents.count {
+            eventsTextLabel[index].text = choosenEvents[index].name
+        }
     }
     
     // MARK: chooseEvents Function
@@ -135,23 +140,36 @@ class ViewController: UIViewController {
         
     }
     
+    // FIXME: Will need to put this in an other file
     enum Directions {
         case up
         case down
     }
     
     // MARK: Up and Down Label
-    func updateEvents(from direction: Directions, from tag: Int) -> Void {
+    func updateEvents(to direction: Directions, from tag: Int) -> Void {
         print("Direction: \(direction), tag: \(tag)")
-        
+        if direction == Directions.up {
+            let forwardEvent = eventsTextLabel[tag - 1].text
+            let backwardEvent = eventsTextLabel[tag].text
+            
+            eventsTextLabel[tag - 1].text = backwardEvent
+            eventsTextLabel[tag].text = forwardEvent
+        } else {
+            let forwardEvent = eventsTextLabel[tag].text
+            let backwardEvent = eventsTextLabel[tag + 1].text
+            
+            eventsTextLabel[tag].text = backwardEvent
+            eventsTextLabel[tag + 1].text = forwardEvent
+        }
     }
     
-    @IBAction func downButtonPressed(_ sender: UIButton) {
-        updateEvents(from: Directions.down, from: sender.tag)
+    @IBAction func downButtonPressed(_ sender: UIButton) -> Void {
+        updateEvents(to: Directions.down, from: sender.tag)
     }
     
     @IBAction func upButtonPressed(_ sender: UIButton) {
-        updateEvents(from: Directions.up, from: sender.tag)
+        updateEvents(to: Directions.up, from: sender.tag)
     }
 }
 
