@@ -136,11 +136,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func downButtonPressed(_ sender: UIButton) {
-        print(sender)
+        print(sender.tag)
     }
     
     @IBAction func upButtonPressed(_ sender: UIButton) {
-        print(sender)
+        print(sender.tag)
     }
 }
 
