@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            displayEvents()
+            submitAnswer()
         }
     }
 
@@ -80,6 +80,9 @@ class ViewController: UIViewController {
     
     // MARK: displayEvents Function
     func displayEvents() -> Void {
+        // We increment the number of events
+        game.questionsAsked += 1
+        
         choosenEvents = chooseEvents()
         
         // Create the array of labels
@@ -106,6 +109,19 @@ class ViewController: UIViewController {
         return randomSelectedEvents
     }
     
+    func submitAnswer() {
+        print("An answer has been submitted\n")
+        
+        // We format the array of answers
+        var eventsSubmitted: [String] = []
+        for index in 0..<eventsTextLabel.count {
+            eventsSubmitted.append(eventsTextLabel[index].text!)
+        }
+        
+        print("Events before modification => \(eventsSubmitted)\n")
+        print("Events before modification => \(choosenEvents)\n")
+    }
+    
     // MARK: displayScore function
     func displayScore() -> Void {
         
@@ -113,7 +129,7 @@ class ViewController: UIViewController {
     
     // MARK: nextRound Function
     func nextRound() -> Void {
-        if game.questionsAsked == game.questionsAsked {
+        if game.questionsAsked == game.questionsPerRound {
             displayScore()
         } else {
             displayEvents()
@@ -148,7 +164,6 @@ class ViewController: UIViewController {
     
     // MARK: Up and Down Label
     func updateEvents(to direction: Directions, from tag: Int) -> Void {
-        print("Direction: \(direction), tag: \(tag)")
         if direction == Directions.up {
             let forwardEvent = eventsTextLabel[tag - 1].text
             let backwardEvent = eventsTextLabel[tag].text
