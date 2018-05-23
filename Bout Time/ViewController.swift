@@ -106,6 +106,7 @@ class ViewController: UIViewController {
             // And removing the 4 questions from the questions array
             events.remove(at: randomIndex)
         }
+        print(randomSelectedEvents)
         return randomSelectedEvents
     }
     
@@ -124,8 +125,18 @@ class ViewController: UIViewController {
             return event0 < event1
         })
         
+        var rightOrderArray: [String] = []
+        for event in choosenEvents {
+            rightOrderArray.append(event.name)
+        }
         
-        print("Events before modification => \(choosenEvents)\n")
+        if rightOrderArray == eventsSubmitted {
+           print("You are right!")
+        } else {
+            print("You are wrong!")
+        }
+        
+        print("Events before modification => \(rightOrderArray)\n")
         print("Events after modification => \(eventsSubmitted)\n")
     }
     
