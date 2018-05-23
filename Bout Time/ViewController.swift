@@ -118,8 +118,15 @@ class ViewController: UIViewController {
             eventsSubmitted.append(eventsTextLabel[index].text!)
         }
         
-        print("Events before modification => \(eventsSubmitted)\n")
+        choosenEvents = choosenEvents.sorted(by: {
+            guard let event0 = $0.year as? Int else { return false }
+            guard let event1 = $1.year as? Int else { return false }
+            return event0 < event1
+        })
+        
+        
         print("Events before modification => \(choosenEvents)\n")
+        print("Events after modification => \(eventsSubmitted)\n")
     }
     
     // MARK: displayScore function
