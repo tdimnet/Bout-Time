@@ -135,12 +135,23 @@ class ViewController: UIViewController {
         
     }
     
+    enum Directions {
+        case up
+        case down
+    }
+    
+    // MARK: Up and Down Label
+    func updateEvents(from direction: Directions, from tag: Int) -> Void {
+        print("Direction: \(direction), tag: \(tag)")
+        
+    }
+    
     @IBAction func downButtonPressed(_ sender: UIButton) {
-        print(sender.tag)
+        updateEvents(from: Directions.down, from: sender.tag)
     }
     
     @IBAction func upButtonPressed(_ sender: UIButton) {
-        print(sender.tag)
+        updateEvents(from: Directions.up, from: sender.tag)
     }
 }
 
