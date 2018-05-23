@@ -134,5 +134,13 @@ class ViewController: UIViewController {
     func timeOut() -> Void {
         
     }
+    
+    @IBAction func downButtonPressed(_ sender: UIButton) {
+        print(sender)
+    }
+    
+    @IBAction func upButtonPressed(_ sender: UIButton) {
+        print(sender)
+    }
 }
 

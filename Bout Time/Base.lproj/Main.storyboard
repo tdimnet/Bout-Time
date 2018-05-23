@@ -42,6 +42,9 @@
                                                         </state>
                                                         <state key="selected" image="backgroundUpSelected"/>
                                                         <state key="highlighted" image="down_full_selected"/>
+                                                        <connections>
+                                                            <action selector="downButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3PB-Oc-6TD"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,6 +82,9 @@
                                                         <rect key="frame" x="0.0" y="51.5" width="51" height="52"/>
                                                         <state key="normal" image="down_half"/>
                                                         <state key="highlighted" image="down_half_selected"/>
+                                                        <connections>
+                                                            <action selector="downButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FqH-bQ-sbV"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -125,6 +131,9 @@
                                                         <rect key="frame" x="0.0" y="52.5" width="51" height="51"/>
                                                         <state key="normal" image="down_half"/>
                                                         <state key="highlighted" image="down_half_selected"/>
+                                                        <connections>
+                                                            <action selector="downButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VXd-5R-6Yd"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
