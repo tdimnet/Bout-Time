@@ -17,11 +17,19 @@ class ViewController: UIViewController {
     // Global variables
     var events: [HistoricalEventStruct] = []
     
-    // IB
+    // Text Label
     @IBOutlet weak var firstEvent: UILabel!
     @IBOutlet weak var secondEvent: UILabel!
     @IBOutlet weak var thirdEvent: UILabel!
     @IBOutlet weak var fourthEvent: UILabel!
+    
+    // Button
+    @IBOutlet weak var firstEventDownButton: UIButton!
+    @IBOutlet weak var secondEventUpButton: UIButton!
+    @IBOutlet weak var secondEventDownButton: UIButton!
+    @IBOutlet weak var thirdEventUpButton: UIButton!
+    @IBOutlet weak var thirdEventDownButton: UIButton!
+    @IBOutlet weak var fourthEventUpButton: UIButton!
     
     
     required init?(coder aDecoder: NSCoder) {

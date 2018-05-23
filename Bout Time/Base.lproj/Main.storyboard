@@ -231,9 +231,15 @@
                     </view>
                     <connections>
                         <outlet property="firstEvent" destination="jzJ-QK-kfO" id="AGP-cX-rtE"/>
+                        <outlet property="firstEventDownButton" destination="s3n-y9-2uK" id="fHu-ij-eKr"/>
                         <outlet property="fourthEvent" destination="blO-vV-WIp" id="WVN-lW-WFF"/>
+                        <outlet property="fourthEventUpButton" destination="sbd-r6-2vQ" id="9FW-qH-zm4"/>
                         <outlet property="secondEvent" destination="q9Y-Ft-sdU" id="xUs-Al-etC"/>
+                        <outlet property="secondEventDownButton" destination="jSX-Uy-EEd" id="dmz-e6-hRB"/>
+                        <outlet property="secondEventUpButton" destination="T3G-8B-Qxj" id="F5V-vV-0zI"/>
                         <outlet property="thirdEvent" destination="kMu-K7-IcC" id="4dk-qL-Zag"/>
+                        <outlet property="thirdEventDownButton" destination="yqz-05-e9L" id="HEM-Ey-teF"/>
+                        <outlet property="thirdEventUpButton" destination="QQV-bD-0QQ" id="dpS-cA-1F7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
