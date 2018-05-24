@@ -67,7 +67,7 @@ class ViewController: UIViewController {
     
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            displayEvents()
+            submitAnswer()
         }
     }
 
@@ -80,6 +80,9 @@ class ViewController: UIViewController {
     
     // MARK: displayEvents Function
     func displayEvents() -> Void {
+        // We increment the number of events
+        game.questionsAsked += 1
+        
         choosenEvents = chooseEvents()
         
         // Create the array of labels
@@ -103,7 +106,38 @@ class ViewController: UIViewController {
             // And removing the 4 questions from the questions array
             events.remove(at: randomIndex)
         }
+        print(randomSelectedEvents)
         return randomSelectedEvents
+    }
+    
+    func submitAnswer() {
+        print("An answer has been submitted\n")
+        
+        // We format the array of answers
+        var eventsSubmitted: [String] = []
+        for index in 0..<eventsTextLabel.count {
+            eventsSubmitted.append(eventsTextLabel[index].text!)
+        }
+        
+        choosenEvents = choosenEvents.sorted(by: {
+            guard let event0 = $0.year as? Int else { return false }
+            guard let event1 = $1.year as? Int else { return false }
+            return event0 < event1
+        })
+        
+        var rightOrderArray: [String] = []
+        for event in choosenEvents {
+            rightOrderArray.append(event.name)
+        }
+        
+        if rightOrderArray == eventsSubmitted {
+           print("You are right!")
+        } else {
+            print("You are wrong!")
+        }
+        
+        print("Events before modification => \(rightOrderArray)\n")
+        print("Events after modification => \(eventsSubmitted)\n")
     }
     
     // MARK: displayScore function
@@ -113,7 +147,7 @@ class ViewController: UIViewController {
     
     // MARK: nextRound Function
     func nextRound() -> Void {
-        if game.questionsAsked == game.questionsAsked {
+        if game.questionsAsked == game.questionsPerRound {
             displayScore()
         } else {
             displayEvents()
@@ -148,7 +182,6 @@ class ViewController: UIViewController {
     
     // MARK: Up and Down Label
     func updateEvents(to direction: Directions, from tag: Int) -> Void {
-        print("Direction: \(direction), tag: \(tag)")
         if direction == Directions.up {
             let forwardEvent = eventsTextLabel[tag - 1].text
             let backwardEvent = eventsTextLabel[tag].text
