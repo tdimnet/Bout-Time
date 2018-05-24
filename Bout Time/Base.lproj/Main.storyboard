@@ -26,16 +26,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="252" height="103.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sputnick was launched by the USSR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-QK-kfO">
-                                                <rect key="frame" x="10" y="31.5" width="181" height="41"/>
+                                                <rect key="frame" x="10" y="32" width="181" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cH1-nF-nNc" userLabel="ArrowsView">
-                                                <rect key="frame" x="201" y="0.0" width="51" height="103.5"/>
+                                                <rect key="frame" x="201" y="0.0" width="51" height="103"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3n-y9-2uK">
-                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="103.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="51" height="103"/>
                                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="down_full">
                                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -116,7 +116,7 @@
                                         <rect key="frame" x="0.0" y="215" width="252" height="103.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start of the Korean War" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMu-K7-IcC">
-                                                <rect key="frame" x="10" y="41.5" width="181" height="20.5"/>
+                                                <rect key="frame" x="10" y="42" width="181" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -133,7 +133,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqz-05-e9L">
-                                                        <rect key="frame" x="0.0" y="52.5" width="51" height="51"/>
+                                                        <rect key="frame" x="0.0" y="51.5" width="51" height="52"/>
                                                         <state key="normal" image="down_half"/>
                                                         <state key="highlighted" image="down_half_selected"/>
                                                         <connections>
@@ -219,7 +219,7 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="0:35" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IkK-lM-vFW">
-                                <rect key="frame" x="122.5" y="474" width="75" height="43"/>
+                                <rect key="frame" x="122.5" y="486" width="75" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -230,22 +230,33 @@
                                 <color key="textColor" red="0.00054475589420000003" green="0.47976779939999997" blue="0.99930316210000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc5-15-ASW" userLabel="FeedbackButton">
+                                <rect key="frame" x="94" y="499" width="133" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="0rC-GA-dLh"/>
+                                    <constraint firstAttribute="width" constant="133" id="Gsi-Pd-nKD"/>
+                                </constraints>
+                                <state key="normal" image="next_round_success"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.16078431372549018" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bqa-Ui-VbB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="2d8-xX-0lT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bqa-Ui-VbB" secondAttribute="trailing" constant="34" id="35d-Pv-zsP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bHc-6r-opG" secondAttribute="bottom" constant="20" id="5Xr-t9-rZm"/>
+                            <constraint firstItem="Wc5-15-ASW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EXJ-pE-aiR"/>
                             <constraint firstItem="Bqa-Ui-VbB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GHF-AU-aeT"/>
-                            <constraint firstItem="bHc-6r-opG" firstAttribute="top" secondItem="IkK-lM-vFW" secondAttribute="bottom" constant="12.5" id="Ldb-jC-oDr"/>
+                            <constraint firstItem="bHc-6r-opG" firstAttribute="top" secondItem="IkK-lM-vFW" secondAttribute="bottom" id="Ldb-jC-oDr"/>
                             <constraint firstItem="IkK-lM-vFW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RwK-Cg-ClS"/>
+                            <constraint firstItem="Wc5-15-ASW" firstAttribute="top" secondItem="Bqa-Ui-VbB" secondAttribute="bottom" constant="33" id="ctt-Xr-9hi"/>
                             <constraint firstItem="Bqa-Ui-VbB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.75" id="f7p-ue-GCw"/>
                             <constraint firstItem="bHc-6r-opG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oFo-V0-G6B"/>
-                            <constraint firstItem="IkK-lM-vFW" firstAttribute="top" secondItem="Bqa-Ui-VbB" secondAttribute="bottom" constant="8" id="xxf-LD-l2A"/>
+                            <constraint firstItem="IkK-lM-vFW" firstAttribute="top" secondItem="Bqa-Ui-VbB" secondAttribute="bottom" constant="20" id="xxf-LD-l2A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="feedbackButton" destination="Wc5-15-ASW" id="fou-bu-ZG7"/>
                         <outlet property="firstEvent" destination="jzJ-QK-kfO" id="AGP-cX-rtE"/>
                         <outlet property="firstEventDownButton" destination="s3n-y9-2uK" id="fHu-ij-eKr"/>
                         <outlet property="fourthEvent" destination="blO-vV-WIp" id="WVN-lW-WFF"/>
@@ -253,14 +264,16 @@
                         <outlet property="secondEvent" destination="q9Y-Ft-sdU" id="xUs-Al-etC"/>
                         <outlet property="secondEventDownButton" destination="jSX-Uy-EEd" id="dmz-e6-hRB"/>
                         <outlet property="secondEventUpButton" destination="T3G-8B-Qxj" id="F5V-vV-0zI"/>
+                        <outlet property="shakeLabel" destination="bHc-6r-opG" id="GPd-6n-eBt"/>
                         <outlet property="thirdEvent" destination="kMu-K7-IcC" id="4dk-qL-Zag"/>
                         <outlet property="thirdEventDownButton" destination="yqz-05-e9L" id="HEM-Ey-teF"/>
                         <outlet property="thirdEventUpButton" destination="QQV-bD-0QQ" id="dpS-cA-1F7"/>
+                        <outlet property="timerLabel" destination="IkK-lM-vFW" id="KKg-Jc-kub"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="130.88455772113943"/>
+            <point key="canvasLocation" x="135" y="129.92957746478874"/>
         </scene>
     </scenes>
     <resources>
@@ -268,6 +281,7 @@
         <image name="down_full_selected" width="79" height="228"/>
         <image name="down_half" width="158" height="229"/>
         <image name="down_half_selected" width="158" height="229"/>
+        <image name="next_round_success" width="558" height="142"/>
         <image name="up_full" width="79" height="228"/>
         <image name="up_full_selected" width="79" height="228"/>
         <image name="up_half" width="158" height="229"/>

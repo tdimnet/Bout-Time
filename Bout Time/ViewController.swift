@@ -33,6 +33,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var thirdEventDownButton: UIButton!
     @IBOutlet weak var fourthEventUpButton: UIButton!
     
+    // Footer View
+    @IBOutlet weak var feedbackButton: UIButton!
+    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var shakeLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         do {
@@ -80,6 +84,8 @@ class ViewController: UIViewController {
     
     // MARK: displayEvents Function
     func displayEvents() -> Void {
+        feedbackButton.isHidden = true
+        
         // We increment the number of events
         game.questionsAsked += 1
         
@@ -112,6 +118,8 @@ class ViewController: UIViewController {
     
     func submitAnswer() {
         print("An answer has been submitted\n")
+        timerLabel.isHidden = true
+        shakeLabel.isHidden = true
         
         // We format the array of answers
         var eventsSubmitted: [String] = []
@@ -131,10 +139,14 @@ class ViewController: UIViewController {
         }
         
         if rightOrderArray == eventsSubmitted {
-           print("You are right!")
+            guard let image: UIImage = UIImage(named: "next_round_success") else { fatalError("An error occurs") }
+            feedbackButton.setImage(image, for: .normal)
         } else {
-            print("You are wrong!")
+            guard let image: UIImage = UIImage(named: "next_round_fail") else { fatalError("An error occurs") }
+            feedbackButton.setImage(image, for: .normal)
         }
+        
+        feedbackButton.isHidden = false
         
         print("Events before modification => \(rightOrderArray)\n")
         print("Events after modification => \(eventsSubmitted)\n")
