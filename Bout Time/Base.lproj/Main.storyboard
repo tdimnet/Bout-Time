@@ -40,7 +40,6 @@
                                                         <state key="normal" image="down_full">
                                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
-                                                        <state key="selected" image="backgroundUpSelected"/>
                                                         <state key="highlighted" image="down_full_selected"/>
                                                         <connections>
                                                             <action selector="downButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3PB-Oc-6TD"/>
@@ -183,7 +182,6 @@
                                                         <state key="normal" image="up_full">
                                                             <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
-                                                        <state key="selected" image="backgroundUpSelected"/>
                                                         <state key="highlighted" image="up_full_selected"/>
                                                         <connections>
                                                             <action selector="upButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lHB-Bo-DJA"/>
@@ -266,7 +264,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgroundUpSelected" width="79" height="228"/>
         <image name="down_full" width="79" height="228"/>
         <image name="down_full_selected" width="79" height="228"/>
         <image name="down_half" width="158" height="229"/>
