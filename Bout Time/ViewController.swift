@@ -62,7 +62,7 @@ class ViewController: UIViewController {
                 // FIXME: Add a better work for the inventory
                 fatalError()
             }
-            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 6, questionsAsked: 0)
+            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 2, questionsAsked: 0)
         } catch let error {
             fatalError("\(error)")
         }
@@ -95,6 +95,11 @@ class ViewController: UIViewController {
     // MARK: gameStart Function
     func gameStart() -> Void {
         gameScoreView.isHidden = true
+        
+        eventStackView.isHidden = false
+        shakeLabel.isHidden = false
+        timerLabel.isHidden = false
+        
         events = game.questionsDictionary
         displayEvents()
     }
@@ -139,6 +144,9 @@ class ViewController: UIViewController {
     func submitAnswer() {
         print("An answer has been submitted\n")
         shakeLabel.text = "Tap events to learn more"
+        timerLabel.text = "0:60"
+        
+        stopTimer()
         
         // We format the array of answers
         var eventsSubmitted: [String] = []
@@ -260,6 +268,10 @@ class ViewController: UIViewController {
     
     @IBAction func launchNextRound(_ sender: UIButton) -> Void {
         nextRound()
+    }
+    
+    @IBAction func startNewGameButton(_ sender: UIButton) {
+        gameStart()
     }
 }
 

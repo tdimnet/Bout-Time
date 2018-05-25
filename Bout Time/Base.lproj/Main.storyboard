@@ -256,15 +256,28 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmb-EY-b5P">
+                                        <rect key="frame" x="80" y="173" width="140" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="140" id="55J-v6-MXY"/>
+                                            <constraint firstAttribute="height" constant="40" id="yKj-CW-qYb"/>
+                                        </constraints>
+                                        <state key="normal" image="play_again"/>
+                                        <connections>
+                                            <action selector="startNewGameButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3c-US-sqE"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.16078431369999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="rp9-h7-zNT" firstAttribute="centerX" secondItem="zbP-wZ-86U" secondAttribute="centerX" id="0Tf-27-NaT"/>
                                     <constraint firstItem="rp9-h7-zNT" firstAttribute="height" secondItem="zbP-wZ-86U" secondAttribute="height" multiplier="0.2" id="7BQ-bo-AQG"/>
                                     <constraint firstItem="jWY-q4-qbc" firstAttribute="centerX" secondItem="zbP-wZ-86U" secondAttribute="centerX" id="Cyf-RZ-Vyx"/>
+                                    <constraint firstItem="lmb-EY-b5P" firstAttribute="centerX" secondItem="zbP-wZ-86U" secondAttribute="centerX" id="MeU-jM-YGK"/>
                                     <constraint firstItem="jWY-q4-qbc" firstAttribute="top" secondItem="zbP-wZ-86U" secondAttribute="top" constant="40" id="O7X-E1-ohg"/>
                                     <constraint firstItem="jWY-q4-qbc" firstAttribute="width" secondItem="zbP-wZ-86U" secondAttribute="width" id="OpN-ML-ZNS"/>
                                     <constraint firstItem="rp9-h7-zNT" firstAttribute="top" secondItem="jWY-q4-qbc" secondAttribute="bottom" id="Rgk-e4-e8k"/>
+                                    <constraint firstAttribute="bottom" secondItem="lmb-EY-b5P" secondAttribute="bottom" constant="20" id="hTm-CO-JPU"/>
                                     <constraint firstItem="jWY-q4-qbc" firstAttribute="height" secondItem="zbP-wZ-86U" secondAttribute="height" multiplier="0.1" id="qQd-yK-BMH"/>
                                     <constraint firstItem="rp9-h7-zNT" firstAttribute="width" secondItem="zbP-wZ-86U" secondAttribute="width" id="wMM-cg-mk1"/>
                                 </constraints>
@@ -320,6 +333,7 @@
         <image name="down_half" width="158" height="229"/>
         <image name="down_half_selected" width="158" height="229"/>
         <image name="next_round_success" width="558" height="142"/>
+        <image name="play_again" width="450" height="142"/>
         <image name="up_full" width="79" height="228"/>
         <image name="up_full_selected" width="79" height="228"/>
         <image name="up_half" width="158" height="229"/>
