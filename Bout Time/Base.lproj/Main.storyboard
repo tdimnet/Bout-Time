@@ -26,7 +26,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="252" height="103.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sputnick was launched by the USSR" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzJ-QK-kfO">
-                                                <rect key="frame" x="10" y="32" width="181" height="41"/>
+                                                <rect key="frame" x="10" y="31.5" width="181" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -133,7 +133,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqz-05-e9L">
-                                                        <rect key="frame" x="0.0" y="51.5" width="51" height="52"/>
+                                                        <rect key="frame" x="0.0" y="52.5" width="51" height="51"/>
                                                         <state key="normal" image="down_half"/>
                                                         <state key="highlighted" image="down_half_selected"/>
                                                         <connections>
@@ -231,7 +231,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc5-15-ASW" userLabel="FeedbackButton">
-                                <rect key="frame" x="94" y="486" width="133" height="43"/>
+                                <rect key="frame" x="93.5" y="486" width="133" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="0rC-GA-dLh"/>
                                     <constraint firstAttribute="width" constant="133" id="Gsi-Pd-nKD"/>
@@ -241,6 +241,10 @@
                                     <action selector="launchNextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XpV-sk-jY0"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zbP-wZ-86U">
+                                <rect key="frame" x="32" y="180.5" width="256" height="227"/>
+                                <color key="backgroundColor" red="0.0" green="0.16078431369999999" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.16078431372549018" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -248,23 +252,29 @@
                             <constraint firstItem="Bqa-Ui-VbB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="2d8-xX-0lT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bqa-Ui-VbB" secondAttribute="trailing" constant="34" id="35d-Pv-zsP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bHc-6r-opG" secondAttribute="bottom" constant="20" id="5Xr-t9-rZm"/>
+                            <constraint firstItem="zbP-wZ-86U" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ANd-Qj-1fg"/>
                             <constraint firstItem="Wc5-15-ASW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EXJ-pE-aiR"/>
                             <constraint firstItem="Bqa-Ui-VbB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GHF-AU-aeT"/>
+                            <constraint firstItem="zbP-wZ-86U" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JQ5-0e-HvC"/>
                             <constraint firstItem="bHc-6r-opG" firstAttribute="top" secondItem="IkK-lM-vFW" secondAttribute="bottom" id="Ldb-jC-oDr"/>
+                            <constraint firstItem="zbP-wZ-86U" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="PLN-8k-Z6T"/>
                             <constraint firstItem="IkK-lM-vFW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RwK-Cg-ClS"/>
                             <constraint firstItem="Wc5-15-ASW" firstAttribute="top" secondItem="Bqa-Ui-VbB" secondAttribute="bottom" constant="20" id="ctt-Xr-9hi"/>
                             <constraint firstItem="Bqa-Ui-VbB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.75" id="f7p-ue-GCw"/>
                             <constraint firstItem="bHc-6r-opG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oFo-V0-G6B"/>
+                            <constraint firstItem="zbP-wZ-86U" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="xdQ-zp-Xfd"/>
                             <constraint firstItem="IkK-lM-vFW" firstAttribute="top" secondItem="Bqa-Ui-VbB" secondAttribute="bottom" constant="20" id="xxf-LD-l2A"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="eventStackView" destination="Bqa-Ui-VbB" id="9tf-kB-f5V"/>
                         <outlet property="feedbackButton" destination="Wc5-15-ASW" id="fou-bu-ZG7"/>
                         <outlet property="firstEvent" destination="jzJ-QK-kfO" id="AGP-cX-rtE"/>
                         <outlet property="firstEventDownButton" destination="s3n-y9-2uK" id="fHu-ij-eKr"/>
                         <outlet property="fourthEvent" destination="blO-vV-WIp" id="WVN-lW-WFF"/>
                         <outlet property="fourthEventUpButton" destination="sbd-r6-2vQ" id="9FW-qH-zm4"/>
+                        <outlet property="gameScoreView" destination="zbP-wZ-86U" id="yF6-5U-xpf"/>
                         <outlet property="secondEvent" destination="q9Y-Ft-sdU" id="xUs-Al-etC"/>
                         <outlet property="secondEventDownButton" destination="jSX-Uy-EEd" id="dmz-e6-hRB"/>
                         <outlet property="secondEventUpButton" destination="T3G-8B-Qxj" id="F5V-vV-0zI"/>

@@ -25,6 +25,11 @@ class ViewController: UIViewController {
     var timeRemaining: Int = 60
     var totalTime: Int = 60
     
+    
+    // MARK: Events Stack View.
+    // Stack View
+    @IBOutlet weak var eventStackView: UIStackView!
+    
     // Text Label
     @IBOutlet weak var firstEvent: UILabel!
     @IBOutlet weak var secondEvent: UILabel!
@@ -39,6 +44,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var thirdEventDownButton: UIButton!
     @IBOutlet weak var fourthEventUpButton: UIButton!
     
+    
+    // MARK: Game score view
+    @IBOutlet weak var gameScoreView: UIView!
+    
+    
+    // MARK: Footer label
     // Footer View
     @IBOutlet weak var feedbackButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
@@ -83,7 +94,7 @@ class ViewController: UIViewController {
 
     // MARK: gameStart Function
     func gameStart() -> Void {
-        // Fill in the questions array
+        gameScoreView.isHidden = true
         events = game.questionsDictionary
         displayEvents()
     }
@@ -162,7 +173,13 @@ class ViewController: UIViewController {
     
     // MARK: displayScore function
     func displayScore() -> Void {
+        gameScoreView.isHidden = false
         
+        eventStackView.isHidden = true
+        
+        feedbackButton.isHidden = true
+        shakeLabel.isHidden = true
+        timerLabel.isHidden = true
     }
     
     // MARK: nextRound Function
