@@ -231,16 +231,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wc5-15-ASW" userLabel="FeedbackButton">
-                                <rect key="frame" x="94" y="499" width="133" height="43"/>
+                                <rect key="frame" x="94" y="486" width="133" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="0rC-GA-dLh"/>
                                     <constraint firstAttribute="width" constant="133" id="Gsi-Pd-nKD"/>
                                 </constraints>
                                 <state key="normal" image="next_round_success"/>
+                                <connections>
+                                    <action selector="launchNextRound:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XpV-sk-jY0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.16078431372549018" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="bHc-6r-opG" firstAttribute="top" secondItem="Wc5-15-ASW" secondAttribute="bottom" id="0f5-sv-3N4"/>
                             <constraint firstItem="Bqa-Ui-VbB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="2d8-xX-0lT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bqa-Ui-VbB" secondAttribute="trailing" constant="34" id="35d-Pv-zsP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bHc-6r-opG" secondAttribute="bottom" constant="20" id="5Xr-t9-rZm"/>
@@ -248,7 +252,7 @@
                             <constraint firstItem="Bqa-Ui-VbB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GHF-AU-aeT"/>
                             <constraint firstItem="bHc-6r-opG" firstAttribute="top" secondItem="IkK-lM-vFW" secondAttribute="bottom" id="Ldb-jC-oDr"/>
                             <constraint firstItem="IkK-lM-vFW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RwK-Cg-ClS"/>
-                            <constraint firstItem="Wc5-15-ASW" firstAttribute="top" secondItem="Bqa-Ui-VbB" secondAttribute="bottom" constant="33" id="ctt-Xr-9hi"/>
+                            <constraint firstItem="Wc5-15-ASW" firstAttribute="top" secondItem="Bqa-Ui-VbB" secondAttribute="bottom" constant="20" id="ctt-Xr-9hi"/>
                             <constraint firstItem="Bqa-Ui-VbB" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.75" id="f7p-ue-GCw"/>
                             <constraint firstItem="bHc-6r-opG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="oFo-V0-G6B"/>
                             <constraint firstItem="IkK-lM-vFW" firstAttribute="top" secondItem="Bqa-Ui-VbB" secondAttribute="bottom" constant="20" id="xxf-LD-l2A"/>

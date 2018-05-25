@@ -85,6 +85,7 @@ class ViewController: UIViewController {
     // MARK: displayEvents Function
     func displayEvents() -> Void {
         feedbackButton.isHidden = true
+        shakeLabel.text = "Shake to complete"
         
         // We increment the number of events
         game.questionsAsked += 1
@@ -118,8 +119,7 @@ class ViewController: UIViewController {
     
     func submitAnswer() {
         print("An answer has been submitted\n")
-        timerLabel.isHidden = true
-        shakeLabel.isHidden = true
+        shakeLabel.text = "Tap events to learn more"
         
         // We format the array of answers
         var eventsSubmitted: [String] = []
@@ -213,8 +213,12 @@ class ViewController: UIViewController {
         updateEvents(to: Directions.down, from: sender.tag)
     }
     
-    @IBAction func upButtonPressed(_ sender: UIButton) {
+    @IBAction func upButtonPressed(_ sender: UIButton) -> Void {
         updateEvents(to: Directions.up, from: sender.tag)
+    }
+    
+    @IBAction func launchNextRound(_ sender: UIButton) -> Void {
+        nextRound()
     }
 }
 
