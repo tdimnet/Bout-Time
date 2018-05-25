@@ -25,6 +25,11 @@ class ViewController: UIViewController {
     var timeRemaining: Int = 60
     var totalTime: Int = 60
     
+    
+    // MARK: Events Stack View.
+    // Stack View
+    @IBOutlet weak var eventStackView: UIStackView!
+    
     // Text Label
     @IBOutlet weak var firstEvent: UILabel!
     @IBOutlet weak var secondEvent: UILabel!
@@ -39,6 +44,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var thirdEventDownButton: UIButton!
     @IBOutlet weak var fourthEventUpButton: UIButton!
     
+    
+    // MARK: Game score view
+    @IBOutlet weak var gameScoreView: UIView!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    // MARK: Footer label
     // Footer View
     @IBOutlet weak var feedbackButton: UIButton!
     @IBOutlet weak var timerLabel: UILabel!
@@ -83,7 +94,15 @@ class ViewController: UIViewController {
 
     // MARK: gameStart Function
     func gameStart() -> Void {
-        // Fill in the questions array
+        game.gameScore = 0
+        game.questionsAsked = 0
+        
+        gameScoreView.isHidden = true
+        
+        eventStackView.isHidden = false
+        shakeLabel.isHidden = false
+        timerLabel.isHidden = false
+        
         events = game.questionsDictionary
         displayEvents()
     }
@@ -128,6 +147,9 @@ class ViewController: UIViewController {
     func submitAnswer() {
         print("An answer has been submitted\n")
         shakeLabel.text = "Tap events to learn more"
+        timerLabel.text = "0:60"
+        
+        stopTimer()
         
         // We format the array of answers
         var eventsSubmitted: [String] = []
@@ -149,6 +171,7 @@ class ViewController: UIViewController {
         if rightOrderArray == eventsSubmitted {
             guard let image: UIImage = UIImage(named: "next_round_success") else { fatalError("An error occurs") }
             feedbackButton.setImage(image, for: .normal)
+            game.gameScore += 1
         } else {
             guard let image: UIImage = UIImage(named: "next_round_fail") else { fatalError("An error occurs") }
             feedbackButton.setImage(image, for: .normal)
@@ -162,7 +185,15 @@ class ViewController: UIViewController {
     
     // MARK: displayScore function
     func displayScore() -> Void {
+        gameScoreView.isHidden = false
         
+        eventStackView.isHidden = true
+        
+        feedbackButton.isHidden = true
+        shakeLabel.isHidden = true
+        timerLabel.isHidden = true
+        
+        scoreLabel.text = "\(game.gameScore)/6"
     }
     
     // MARK: nextRound Function
@@ -243,6 +274,10 @@ class ViewController: UIViewController {
     
     @IBAction func launchNextRound(_ sender: UIButton) -> Void {
         nextRound()
+    }
+    
+    @IBAction func startNewGameButton(_ sender: UIButton) {
+        gameStart()
     }
 }
 
