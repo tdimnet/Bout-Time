@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     
     // MARK: Game score view
     @IBOutlet weak var gameScoreView: UIView!
-    
+    @IBOutlet weak var scoreLabel: UILabel!
     
     // MARK: Footer label
     // Footer View
@@ -62,7 +62,7 @@ class ViewController: UIViewController {
                 // FIXME: Add a better work for the inventory
                 fatalError()
             }
-            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 2, questionsAsked: 0)
+            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 6, questionsAsked: 0)
         } catch let error {
             fatalError("\(error)")
         }
@@ -94,6 +94,9 @@ class ViewController: UIViewController {
 
     // MARK: gameStart Function
     func gameStart() -> Void {
+        game.gameScore = 0
+        game.questionsAsked = 0
+        
         gameScoreView.isHidden = true
         
         eventStackView.isHidden = false
@@ -168,6 +171,7 @@ class ViewController: UIViewController {
         if rightOrderArray == eventsSubmitted {
             guard let image: UIImage = UIImage(named: "next_round_success") else { fatalError("An error occurs") }
             feedbackButton.setImage(image, for: .normal)
+            game.gameScore += 1
         } else {
             guard let image: UIImage = UIImage(named: "next_round_fail") else { fatalError("An error occurs") }
             feedbackButton.setImage(image, for: .normal)
@@ -188,6 +192,8 @@ class ViewController: UIViewController {
         feedbackButton.isHidden = true
         shakeLabel.isHidden = true
         timerLabel.isHidden = true
+        
+        scoreLabel.text = "\(game.gameScore)/6"
     }
     
     // MARK: nextRound Function

@@ -312,6 +312,7 @@
                         <outlet property="fourthEvent" destination="blO-vV-WIp" id="WVN-lW-WFF"/>
                         <outlet property="fourthEventUpButton" destination="sbd-r6-2vQ" id="9FW-qH-zm4"/>
                         <outlet property="gameScoreView" destination="zbP-wZ-86U" id="yF6-5U-xpf"/>
+                        <outlet property="scoreLabel" destination="rp9-h7-zNT" id="zgE-7i-M2l"/>
                         <outlet property="secondEvent" destination="q9Y-Ft-sdU" id="xUs-Al-etC"/>
                         <outlet property="secondEventDownButton" destination="jSX-Uy-EEd" id="dmz-e6-hRB"/>
                         <outlet property="secondEventUpButton" destination="T3G-8B-Qxj" id="F5V-vV-0zI"/>
