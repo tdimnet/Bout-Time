@@ -8,6 +8,7 @@
 
 import UIKit
 import GameKit
+import SafariServices
 
 class ViewController: UIViewController {
     
@@ -36,6 +37,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var thirdEvent: UILabel!
     @IBOutlet weak var fourthEvent: UILabel!
     
+    // See more buttons
+    @IBOutlet weak var firstSeeMore: UIButton!
+    @IBOutlet weak var secondSeeMore: UIButton!
+    @IBOutlet weak var thirdSeeMore: UIButton!
+    @IBOutlet weak var fourthSeeMore: UIButton!
+    
+    
     // Button
     @IBOutlet weak var firstEventDownButton: UIButton!
     @IBOutlet weak var secondEventUpButton: UIButton!
@@ -58,7 +66,7 @@ class ViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         do {
             let dictionary = try PlistConverter.dictionary(fromFile: "HistoricalEvents", ofType: "plist")
-            guard let historicalEventsinventory: [HistoricalEventStruct] = try HistoricalEventsUnarchiver.historicalEventsInventory(fromDictionary: dictionary) as? [HistoricalEventStruct] else {
+            guard let historicalEventsinventory: [HistoricalEventStruct] = HistoricalEventsUnarchiver.historicalEventsInventory(fromDictionary: dictionary) as? [HistoricalEventStruct] else {
                 // FIXME: Add a better work for the inventory
                 fatalError()
             }
@@ -109,6 +117,12 @@ class ViewController: UIViewController {
     
     // MARK: displayEvents Function
     func displayEvents() -> Void {
+        
+        firstSeeMore.isHidden = true
+        secondSeeMore.isHidden = true
+        thirdSeeMore.isHidden = true
+        fourthSeeMore.isHidden = true
+        
         feedbackButton.isHidden = true
         shakeLabel.text = "Shake to complete"
         
@@ -148,6 +162,12 @@ class ViewController: UIViewController {
         print("An answer has been submitted\n")
         shakeLabel.text = "Tap events to learn more"
         timerLabel.text = "0:60"
+        
+        
+        firstSeeMore.isHidden = false
+        secondSeeMore.isHidden = false
+        thirdSeeMore.isHidden = false
+        fourthSeeMore.isHidden = false
         
         stopTimer()
         
@@ -278,6 +298,21 @@ class ViewController: UIViewController {
     
     @IBAction func startNewGameButton(_ sender: UIButton) {
         gameStart()
+    }
+    
+    // MARK: See more events
+    @IBAction func seeMoreWebView(_ sender: UIButton) {
+        showTutorial(to: "http://github.com/")
+    }
+    
+    func showTutorial(to url: String) {
+        if let url = URL(string: url) {
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+            
+            let vc = SFSafariViewController(url: url, configuration: config)
+            present(vc, animated: true)
+        }
     }
 }
 
