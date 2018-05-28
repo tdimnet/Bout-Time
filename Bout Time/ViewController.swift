@@ -70,7 +70,7 @@ class ViewController: UIViewController {
                 // FIXME: Add a better work for the inventory
                 fatalError()
             }
-            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 6, questionsAsked: 0)
+            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 2, questionsAsked: 0)
         } catch let error {
             fatalError("\(error)")
         }
@@ -154,17 +154,20 @@ class ViewController: UIViewController {
             // And removing the 4 questions from the questions array
             events.remove(at: randomIndex)
         }
-        print(randomSelectedEvents)
         return randomSelectedEvents
     }
     
     func submitAnswer() {
-        print("An answer has been submitted\n")
         shakeLabel.text = "Tap events to learn more"
         timerLabel.text = "0:60"
         
-        
         firstSeeMore.isHidden = false
+        if let textEvent = firstEvent.text {
+            firstSeeMore.setTitle(textEvent, for: .normal)
+            firstSeeMore.setTitle(textEvent, for: .highlighted)
+        }
+        
+        
         secondSeeMore.isHidden = false
         thirdSeeMore.isHidden = false
         fourthSeeMore.isHidden = false
@@ -198,9 +201,6 @@ class ViewController: UIViewController {
         }
         
         feedbackButton.isHidden = false
-        
-        print("Events before modification => \(rightOrderArray)\n")
-        print("Events after modification => \(eventsSubmitted)\n")
     }
     
     // MARK: displayScore function
