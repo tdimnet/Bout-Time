@@ -313,20 +313,15 @@ class ViewController: UIViewController {
     
     // MARK: See more events
     @IBAction func seeMoreWebView(_ sender: UIButton) {
-        if let label = sender.currentTitle {
-            let url: String? = setUrl(from: label)
-            print(url)
-            //showTutorial(to: "http://github.com/")
+        if let label = sender.currentTitle, let url = setUrl(from: label) {
+            showTutorial(to: url)
         }
     }
     
     func setUrl(from text: String) -> String? {
-        
-        print(choosenEvents)
-        
         for event in choosenEvents {
             if text == event.name {
-                return text
+                return event.url
             }
         }
         return nil
