@@ -162,9 +162,20 @@ class ViewController: UIViewController {
         timerLabel.text = "0:60"
         
         firstSeeMore.isHidden = false
-        if let textEvent = firstEvent.text {
-            firstSeeMore.setTitle(textEvent, for: .normal)
-            firstSeeMore.setTitle(textEvent, for: .highlighted)
+        
+        
+        if let firstTextEvent = firstEvent.text, let secondTextEvent = secondEvent.text, let thirdTextEvent = thirdEvent.text, let fourthTextEvent = fourthEvent.text {
+            firstSeeMore.setTitle(firstTextEvent, for: .normal)
+            firstSeeMore.setTitle(firstTextEvent, for: .highlighted)
+            
+            secondSeeMore.setTitle(secondTextEvent, for: .normal)
+            secondSeeMore.setTitle(secondTextEvent, for: .highlighted)
+            
+            thirdSeeMore.setTitle(thirdTextEvent, for: .normal)
+            thirdSeeMore.setTitle(thirdTextEvent, for: .highlighted)
+            
+            fourthSeeMore.setTitle(fourthTextEvent, for: .normal)
+            fourthSeeMore.setTitle(fourthTextEvent, for: .highlighted)
         }
         
         
