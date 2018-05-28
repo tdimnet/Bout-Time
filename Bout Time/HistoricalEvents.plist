@@ -228,6 +228,8 @@
 	</dict>
 	<key>Event 8</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Caesar%27s_invasions_of_Britain</string>
 		<key>name</key>
 		<string>Julius Ceasar attacks Great Britain</string>
 		<key>date</key>
@@ -235,6 +237,8 @@
 	</dict>
 	<key>Event 7</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/History_of_the_Great_Wall_of_China</string>
 		<key>name</key>
 		<string>Work on the Great Wall of China begins</string>
 		<key>date</key>
@@ -242,6 +246,8 @@
 	</dict>
 	<key>Event 6</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Death_of_Alexander_the_Great</string>
 		<key>name</key>
 		<string>Alexander dies at Babylon</string>
 		<key>date</key>
@@ -249,6 +255,8 @@
 	</dict>
 	<key>Event 5</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Alexander_the_Great</string>
 		<key>name</key>
 		<string>Egypt conquered by Alexander</string>
 		<key>date</key>
@@ -256,6 +264,8 @@
 	</dict>
 	<key>Event 4</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Aristotle</string>
 		<key>name</key>
 		<string>The period of Aristotle and Plato</string>
 		<key>date</key>
@@ -263,6 +273,8 @@
 	</dict>
 	<key>Event 3</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Battle_of_Marathon</string>
 		<key>name</key>
 		<string>Greeks defeated the Persians at the Battle of Marathon</string>
 		<key>date</key>
@@ -270,6 +282,8 @@
 	</dict>
 	<key>Event 2</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Founding_of_Rome</string>
 		<key>name</key>
 		<string>Foundation of Rome</string>
 		<key>date</key>
@@ -277,6 +291,8 @@
 	</dict>
 	<key>Event 1</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Ancient_Olympic_Games</string>
 		<key>name</key>
 		<string>First Olympiad in Greece</string>
 		<key>date</key>
@@ -284,6 +300,8 @@
 	</dict>
 	<key>Event 0</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza</string>
 		<key>name</key>
 		<string>Building of the Great Pyramid</string>
 		<key>date</key>

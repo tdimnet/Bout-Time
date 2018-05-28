@@ -321,6 +321,9 @@ class ViewController: UIViewController {
     }
     
     func setUrl(from text: String) -> String? {
+        
+        print(choosenEvents)
+        
         for event in choosenEvents {
             if text == event.name {
                 return text
