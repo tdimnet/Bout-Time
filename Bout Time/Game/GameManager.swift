@@ -29,7 +29,6 @@ protocol GameManagerProtocol {
     var questionsDictionary: [HistoricalEventStruct] { get set }
     
     var gameScore: Int { get set }
-    var timer: Int { get set }
     var questionsPerRound: Int { get }
     var questionsAsked: Int { get set }
     
@@ -43,7 +42,6 @@ struct GameManager: GameManagerProtocol {
     var questionsDictionary: [HistoricalEventStruct]
     
     var gameScore: Int
-    var timer: Int
     let questionsPerRound: Int
     var questionsAsked: Int
     
