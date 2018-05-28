@@ -14,8 +14,8 @@ class HistoricalEventsUnarchiver {
         var inventory: [HistoricalEventProtocol] = []
         
         for (_, value) in dictionary {
-            if let historicalEventDictionary = value as? [String: AnyObject], let date = historicalEventDictionary["date"] as? Int, let name = historicalEventDictionary["name"] as? String {
-                let historicalEvent = HistoricalEventStruct(name: name, year: date)
+            if let historicalEventDictionary = value as? [String: AnyObject], let date = historicalEventDictionary["date"] as? Int, let name = historicalEventDictionary["name"] as? String, let url = historicalEventDictionary["url"] as? String {
+                let historicalEvent = HistoricalEventStruct(name: name, year: date, url: url)
                 inventory.append(historicalEvent)
             }
         }

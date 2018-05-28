@@ -8,6 +8,7 @@
 
 import UIKit
 import GameKit
+import SafariServices
 
 class ViewController: UIViewController {
     
@@ -36,6 +37,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var thirdEvent: UILabel!
     @IBOutlet weak var fourthEvent: UILabel!
     
+    // See more buttons
+    @IBOutlet weak var firstSeeMore: UIButton!
+    @IBOutlet weak var secondSeeMore: UIButton!
+    @IBOutlet weak var thirdSeeMore: UIButton!
+    @IBOutlet weak var fourthSeeMore: UIButton!
+    
+    
     // Button
     @IBOutlet weak var firstEventDownButton: UIButton!
     @IBOutlet weak var secondEventUpButton: UIButton!
@@ -58,11 +66,11 @@ class ViewController: UIViewController {
     required init?(coder aDecoder: NSCoder) {
         do {
             let dictionary = try PlistConverter.dictionary(fromFile: "HistoricalEvents", ofType: "plist")
-            guard let historicalEventsinventory: [HistoricalEventStruct] = try HistoricalEventsUnarchiver.historicalEventsInventory(fromDictionary: dictionary) as? [HistoricalEventStruct] else {
+            guard let historicalEventsinventory: [HistoricalEventStruct] = HistoricalEventsUnarchiver.historicalEventsInventory(fromDictionary: dictionary) as? [HistoricalEventStruct] else {
                 // FIXME: Add a better work for the inventory
                 fatalError()
             }
-            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 6, questionsAsked: 0)
+            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 2, questionsAsked: 0)
         } catch let error {
             fatalError("\(error)")
         }
@@ -109,6 +117,12 @@ class ViewController: UIViewController {
     
     // MARK: displayEvents Function
     func displayEvents() -> Void {
+        
+        firstSeeMore.isHidden = true
+        secondSeeMore.isHidden = true
+        thirdSeeMore.isHidden = true
+        fourthSeeMore.isHidden = true
+        
         feedbackButton.isHidden = true
         shakeLabel.text = "Shake to complete"
         
@@ -140,14 +154,34 @@ class ViewController: UIViewController {
             // And removing the 4 questions from the questions array
             events.remove(at: randomIndex)
         }
-        print(randomSelectedEvents)
         return randomSelectedEvents
     }
     
     func submitAnswer() {
-        print("An answer has been submitted\n")
         shakeLabel.text = "Tap events to learn more"
         timerLabel.text = "0:60"
+        
+        firstSeeMore.isHidden = false
+        
+        
+        if let firstTextEvent = firstEvent.text, let secondTextEvent = secondEvent.text, let thirdTextEvent = thirdEvent.text, let fourthTextEvent = fourthEvent.text {
+            firstSeeMore.setTitle(firstTextEvent, for: .normal)
+            firstSeeMore.setTitle(firstTextEvent, for: .highlighted)
+            
+            secondSeeMore.setTitle(secondTextEvent, for: .normal)
+            secondSeeMore.setTitle(secondTextEvent, for: .highlighted)
+            
+            thirdSeeMore.setTitle(thirdTextEvent, for: .normal)
+            thirdSeeMore.setTitle(thirdTextEvent, for: .highlighted)
+            
+            fourthSeeMore.setTitle(fourthTextEvent, for: .normal)
+            fourthSeeMore.setTitle(fourthTextEvent, for: .highlighted)
+        }
+        
+        
+        secondSeeMore.isHidden = false
+        thirdSeeMore.isHidden = false
+        fourthSeeMore.isHidden = false
         
         stopTimer()
         
@@ -178,9 +212,6 @@ class ViewController: UIViewController {
         }
         
         feedbackButton.isHidden = false
-        
-        print("Events before modification => \(rightOrderArray)\n")
-        print("Events after modification => \(eventsSubmitted)\n")
     }
     
     // MARK: displayScore function
@@ -278,6 +309,32 @@ class ViewController: UIViewController {
     
     @IBAction func startNewGameButton(_ sender: UIButton) {
         gameStart()
+    }
+    
+    // MARK: See more events
+    @IBAction func seeMoreWebView(_ sender: UIButton) {
+        if let label = sender.currentTitle, let url = setUrl(from: label) {
+            showTutorial(to: url)
+        }
+    }
+    
+    func setUrl(from text: String) -> String? {
+        for event in choosenEvents {
+            if text == event.name {
+                return event.url
+            }
+        }
+        return nil
+    }
+    
+    func showTutorial(to url: String) {
+        if let url = URL(string: url) {
+            let config = SFSafariViewController.Configuration()
+            config.entersReaderIfAvailable = true
+            
+            let vc = SFSafariViewController(url: url, configuration: config)
+            present(vc, animated: true)
+        }
     }
 }
 

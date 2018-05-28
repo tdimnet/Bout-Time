@@ -4,6 +4,8 @@
 <dict>
 	<key>Event 40</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Assassination_of_Abraham_Lincoln</string>
 		<key>name</key>
 		<string>Assassination of Abraham Lincoln</string>
 		<key>date</key>
@@ -11,6 +13,8 @@
 	</dict>
 	<key>Event 39</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Slavery_in_the_United_States</string>
 		<key>name</key>
 		<string>Slavery abolished in USA</string>
 		<key>date</key>
@@ -18,6 +22,8 @@
 	</dict>
 	<key>Event 38</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/American_Civil_War</string>
 		<key>name</key>
 		<string>Beginning of the American Civil War</string>
 		<key>date</key>
@@ -25,6 +31,8 @@
 	</dict>
 	<key>Event 37</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Queen_Victoria</string>
 		<key>name</key>
 		<string>Queen Victoria&apos;s accession to the throne of England</string>
 		<key>date</key>
@@ -32,6 +40,8 @@
 	</dict>
 	<key>Event 36</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Reform_Act_1832</string>
 		<key>name</key>
 		<string>Reforms Bill passed in England</string>
 		<key>date</key>
@@ -39,6 +49,8 @@
 	</dict>
 	<key>Event 35</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Napoleon</string>
 		<key>name</key>
 		<string>Death of Napolean</string>
 		<key>date</key>
@@ -46,6 +58,8 @@
 	</dict>
 	<key>Event 34</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Battle_of_Waterloo</string>
 		<key>name</key>
 		<string>Battle of Waterloo</string>
 		<key>date</key>
@@ -53,6 +67,8 @@
 	</dict>
 	<key>Event 33</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Battle_of_Trafalgar</string>
 		<key>name</key>
 		<string>Battle of Trafalagar and Nelson&apos;s death</string>
 		<key>date</key>
@@ -60,6 +76,8 @@
 	</dict>
 	<key>Event 32</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/French_Revolution</string>
 		<key>name</key>
 		<string>French Revolution</string>
 		<key>date</key>
@@ -67,6 +85,8 @@
 	</dict>
 	<key>Event 31</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence</string>
 		<key>name</key>
 		<string>Declaration of American Independence</string>
 		<key>date</key>
@@ -74,6 +94,8 @@
 	</dict>
 	<key>Event 30</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Acts_of_Union_1707</string>
 		<key>name</key>
 		<string>Union of England and Scotland</string>
 		<key>date</key>
@@ -81,6 +103,8 @@
 	</dict>
 	<key>Event 29</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Battle_of_Blenheim</string>
 		<key>name</key>
 		<string>Battle of Blenheim</string>
 		<key>date</key>
@@ -88,6 +112,8 @@
 	</dict>
 	<key>Event 28</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Glorious_Revolution</string>
 		<key>name</key>
 		<string>Glorious Revolution in England</string>
 		<key>date</key>
@@ -95,6 +121,8 @@
 	</dict>
 	<key>Event 27</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Great_Plague_of_London</string>
 		<key>name</key>
 		<string>The Great Plague of England</string>
 		<key>date</key>
@@ -102,6 +130,8 @@
 	</dict>
 	<key>Event 26</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Restoration_(England)</string>
 		<key>name</key>
 		<string>Monarchy restored in England</string>
 		<key>date</key>
@@ -109,6 +139,8 @@
 	</dict>
 	<key>Event 25</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Charles_I_of_England</string>
 		<key>name</key>
 		<string>Execution of Charles I</string>
 		<key>date</key>
@@ -116,6 +148,8 @@
 	</dict>
 	<key>Event 24</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/East_India_Company</string>
 		<key>name</key>
 		<string>British East India Company established in India</string>
 		<key>date</key>
@@ -123,6 +157,8 @@
 	</dict>
 	<key>Event 23</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Spanish_Armada</string>
 		<key>name</key>
 		<string>Spanish Armada defeated</string>
 		<key>date</key>
@@ -130,6 +166,8 @@
 	</dict>
 	<key>Event 22</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Portuguese_discovery_of_the_sea_route_to_India</string>
 		<key>name</key>
 		<string>Sea-route to India discovered by Vasco-de-Gama</string>
 		<key>date</key>
@@ -137,6 +175,8 @@
 	</dict>
 	<key>Event 21</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Christopher_Columbus</string>
 		<key>name</key>
 		<string>Discovery of America by Columbus</string>
 		<key>date</key>
@@ -144,6 +184,8 @@
 	</dict>
 	<key>Event 20</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Fall_of_Constantinople</string>
 		<key>name</key>
 		<string>Turks captured Constantinople</string>
 		<key>date</key>
@@ -151,6 +193,8 @@
 	</dict>
 	<key>Event 19</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Black_Death_in_England</string>
 		<key>name</key>
 		<string>English faces Black Death Plague</string>
 		<key>date</key>
@@ -158,6 +202,8 @@
 	</dict>
 	<key>Event 18</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Hundred_Years%27_War</string>
 		<key>name</key>
 		<string>The Hundred years War broke ou</string>
 		<key>date</key>
@@ -165,6 +211,8 @@
 	</dict>
 	<key>Event 17</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Roger_Bacon</string>
 		<key>name</key>
 		<string>Roger Bacon invents gunpowder</string>
 		<key>date</key>
@@ -172,6 +220,8 @@
 	</dict>
 	<key>Event 16</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Norman_conquest_of_England</string>
 		<key>name</key>
 		<string>Norman invasion of England</string>
 		<key>date</key>
@@ -179,6 +229,8 @@
 	</dict>
 	<key>Event 15</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Umayyad_conquest_of_Hispania</string>
 		<key>name</key>
 		<string>Arabs invade Spain</string>
 		<key>date</key>
@@ -186,6 +238,8 @@
 	</dict>
 	<key>Event 14</key>
 	<dict>
+		<key>url</key>
+		<string>http://www.cyberistan.org/islamic/death.html</string>
 		<key>name</key>
 		<string>Death of Mohammed</string>
 		<key>date</key>
@@ -193,6 +247,8 @@
 	</dict>
 	<key>Event 13</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Hegira</string>
 		<key>name</key>
 		<string>Flight of Mohammed from Mecca to Madina</string>
 		<key>date</key>
@@ -200,6 +256,8 @@
 	</dict>
 	<key>Event 12</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Muhammad_in_Mecca</string>
 		<key>name</key>
 		<string>Prophet Mohammed born at Mecca</string>
 		<key>date</key>
@@ -207,6 +265,8 @@
 	</dict>
 	<key>Event 11</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Huns</string>
 		<key>name</key>
 		<string>Huns&apos; invasion of Europe</string>
 		<key>date</key>
@@ -214,6 +274,8 @@
 	</dict>
 	<key>Event 10</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Crucifixion_of_Jesus</string>
 		<key>name</key>
 		<string>Crucifixion of Jesus Christ</string>
 		<key>date</key>
@@ -221,6 +283,8 @@
 	</dict>
 	<key>Event 9</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Nativity_of_Jesus</string>
 		<key>name</key>
 		<string>Birth of Jesus Christ</string>
 		<key>date</key>
@@ -228,6 +292,8 @@
 	</dict>
 	<key>Event 8</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Caesar%27s_invasions_of_Britain</string>
 		<key>name</key>
 		<string>Julius Ceasar attacks Great Britain</string>
 		<key>date</key>
@@ -235,6 +301,8 @@
 	</dict>
 	<key>Event 7</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/History_of_the_Great_Wall_of_China</string>
 		<key>name</key>
 		<string>Work on the Great Wall of China begins</string>
 		<key>date</key>
@@ -242,6 +310,8 @@
 	</dict>
 	<key>Event 6</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Death_of_Alexander_the_Great</string>
 		<key>name</key>
 		<string>Alexander dies at Babylon</string>
 		<key>date</key>
@@ -249,6 +319,8 @@
 	</dict>
 	<key>Event 5</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Alexander_the_Great</string>
 		<key>name</key>
 		<string>Egypt conquered by Alexander</string>
 		<key>date</key>
@@ -256,6 +328,8 @@
 	</dict>
 	<key>Event 4</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Aristotle</string>
 		<key>name</key>
 		<string>The period of Aristotle and Plato</string>
 		<key>date</key>
@@ -263,6 +337,8 @@
 	</dict>
 	<key>Event 3</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Battle_of_Marathon</string>
 		<key>name</key>
 		<string>Greeks defeated the Persians at the Battle of Marathon</string>
 		<key>date</key>
@@ -270,6 +346,8 @@
 	</dict>
 	<key>Event 2</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Founding_of_Rome</string>
 		<key>name</key>
 		<string>Foundation of Rome</string>
 		<key>date</key>
@@ -277,6 +355,8 @@
 	</dict>
 	<key>Event 1</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Ancient_Olympic_Games</string>
 		<key>name</key>
 		<string>First Olympiad in Greece</string>
 		<key>date</key>
@@ -284,6 +364,8 @@
 	</dict>
 	<key>Event 0</key>
 	<dict>
+		<key>url</key>
+		<string>https://en.wikipedia.org/wiki/Great_Pyramid_of_Giza</string>
 		<key>name</key>
 		<string>Building of the Great Pyramid</string>
 		<key>date</key>

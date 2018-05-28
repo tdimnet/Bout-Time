@@ -12,6 +12,7 @@ import Foundation
 protocol HistoricalEventProtocol {
     var name: String { get }
     var year: Int { get }
+    var url: String { get }
 }
 
 
@@ -19,6 +20,7 @@ protocol HistoricalEventProtocol {
 struct HistoricalEventStruct: HistoricalEventProtocol {
     let name: String
     let year: Int
+    let url: String
 }
 
 
