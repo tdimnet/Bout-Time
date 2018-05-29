@@ -29,12 +29,8 @@ protocol GameManagerProtocol {
     var questionsDictionary: [HistoricalEventStruct] { get set }
     
     var gameScore: Int { get set }
-    var timer: Int { get set }
     var questionsPerRound: Int { get }
     var questionsAsked: Int { get set }
-    
-    func checkAnswer(from question: HistoricalEventStruct, with answer: String) -> Bool
-    func setIsGameOver(gameScore: Int, timer: Int) -> Bool
 }
 
 
@@ -43,15 +39,6 @@ struct GameManager: GameManagerProtocol {
     var questionsDictionary: [HistoricalEventStruct]
     
     var gameScore: Int
-    var timer: Int
     let questionsPerRound: Int
     var questionsAsked: Int
-    
-    func checkAnswer(from question: HistoricalEventStruct, with answer: String) -> Bool {
-        return true
-    }
-    
-    func setIsGameOver(gameScore: Int, timer: Int) -> Bool {
-        return true
-    }
 }

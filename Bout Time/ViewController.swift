@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     // Class properties
     var game: GameManager
+    var timer: TimerManager
     
     // Global variables: Events
     var events: [HistoricalEventStruct] = []
@@ -21,10 +22,11 @@ class ViewController: UIViewController {
     var eventsTextLabel: [UILabel] = []
     
     // Global variables: Timer
-    var timerIsOn: Bool = false
-    var timer: Timer = Timer()
-    var timeRemaining: Int = 60
-    var totalTime: Int = 60
+    
+//    var timerIsOn: Bool = false
+//    var oldTimer: Timer = Timer()
+//    var timeRemaining: Int = 60
+//    var totalTime: Int = 60
     
     
     // MARK: Events Stack View.
@@ -70,7 +72,8 @@ class ViewController: UIViewController {
                 // FIXME: Add a better work for the inventory
                 fatalError()
             }
-            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, timer: 20, questionsPerRound: 2, questionsAsked: 0)
+            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, questionsPerRound: 6, questionsAsked: 0)
+            self.timer = TimerManager(timerIsOn: false, timer: Timer(), timeRemaining: 60, totalTime: 60)
         } catch let error {
             fatalError("\(error)")
         }
@@ -238,37 +241,37 @@ class ViewController: UIViewController {
 
     // MARK: startTimer function
     func startTimer() -> Void {
-        if !timerIsOn {
-            timeRemaining = 60
+        if !timer.timerIsOn {
+            timer.timeRemaining = 60
             // FIXME: compiler error when this method is called
-            timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerIsRunning), userInfo: nil, repeats: true)
-            timerIsOn = true
+            timer.timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerIsRunning), userInfo: nil, repeats: true)
+            timer.timerIsOn = true
             
         }
     }
     
     // MARK: stopTimer Function
     func stopTimer() -> Void {
-        if timerIsOn {
-            timer.invalidate()
-            timerIsOn = false
+        if timer.timerIsOn {
+            timer.timer.invalidate()
+            timer.timerIsOn = false
         }
     }
     
     // MARK: timerIsRunning Function
     @objc func timerIsRunning() -> Void {
-        if timeRemaining >= 0 {
-            timerLabel.text = "0:\(timeRemaining)"
+        if timer.timeRemaining >= 0 {
+            timerLabel.text = "0:\(timer.timeRemaining)"
         } else {
             timeOut()
         }
-        timeRemaining -= 1
+        timer.timeRemaining -= 1
     }
     
     // MARK: timeOut Function
     func timeOut() -> Void {
-        timer.invalidate()
-        timerIsOn = false
+        timer.timer.invalidate()
+        timer.timerIsOn = false
         submitAnswer()
     }
     
