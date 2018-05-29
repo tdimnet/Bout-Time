@@ -72,7 +72,7 @@ class ViewController: UIViewController {
                 // FIXME: Add a better work for the inventory
                 fatalError()
             }
-            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, questionsPerRound: 2, questionsAsked: 0)
+            self.game = GameManager(questionsDictionary: historicalEventsinventory, gameScore: 0, questionsPerRound: 6, questionsAsked: 0)
             self.timer = TimerManager(timerIsOn: false, timer: Timer(), timeRemaining: 60, totalTime: 60)
         } catch let error {
             fatalError("\(error)")
